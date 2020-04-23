@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>线路详情页</title>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css" />
+	<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/common/public.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/index/index.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/specialty/specialty-list.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/details/datails.css"/>
+	<link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/Line/calendar-pro.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/Scenic/Scenic_spot.css">
+	<link rel="stylesheet" href="../../css/Scenic/Scenic-details.css">
+</head>
+<style>
+	.content_details_left_banner_time {
+		margin: 10px 0 21px 0;
+	}
+
+	.content_details_left_title {
+		width: 475px;
+		padding: 0px 28px 17px 24px;
+	}
+	.content_details_left_banner_time{
+		color: #333;
+	}
+	.time{
+		color: #666;
+		margin-left: 10px;
+	}
+	.ticket_type {
+		margin-bottom: 20px;
+	}
+	.Explain{
+		display: flex;
+		margin-top: 31px;
+	}
+	.Explain img{
+		width: 30px;
+		height: 40px;
+	}
+	.Explain_content{
+		line-height: 2;
+		margin: 20px 0 0 15px;
+		color: #666;
+	}
+	.Starting_price_content{
+		color: #999;
+		line-height: 2;
+	}
+	/* .g-listbox-l{
+		width: 890px;
+	} */
+	.crumbs{
+			padding: 10px 0;
+		}
+	.m-pdlist:last-of-type {
+			margin-left: 30px;
+		}
+	.g-listbox-r-child-biao {
+    padding: 0 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 204px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 13px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: left;
+}
+.top-left-img-bg {
+    width: 870px;
+    /* height: 500px; */
+    background: white;
+    box-shadow: 0px 10px 6px 2px #f5f5f5;
+}
+.r-img-box {
+    width: 160px;
+    height: 120px;
+    border: 1px solid #F0F0F0;
+    margin-left: 66px;
+    margin-top: 28px;
+    line-height: 120px;
+    text-align: center;
+}
+</style>
+
+<body>
+	<nav>
+		<div class="nav_title">
+			<div class="nav_title_head">
+				<p class="nav_title_city"><span>2019年12月10号 星期二 </span><span>新疆天池 晴 低温 -6℃~高温3℃ 微风2级</span></p>
+				<div class="nav_title_city fujian"><a href="#">登录</a><span class="fenge">|</span><a class="fenge"
+						href="#">注册</a><a href="#">收藏<div class="sjx"></div></a><a href="#">购物车<div class="sjx"></div>
+					</a><a href="#">客服<div class="sjx"></div></a>
+					<div class="login1"><img src="../../img/public-top-icon-mobile.png" alt=""></div>
+					<div class="login2"><img src="../../img/public-top-icon-wx.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="nav_list">
+				<div class="nav_list_logo">
+					<img src="../../img/public-top-logo.png" alt="">
+				</div>
+				<span class="fgx"></span>
+				<ul class="nav_list_go">
+					<li><a href="#">首页<span class="sjx"></span></a></li>
+					<li><a href="#">地域馆<span class="sjx"></span></a></li>
+					<li><a href="#">特产<span class="sjx"></span></a></li>
+					<li><a href="#">美食<span class="sjx"></span></a></li>
+					<li><a href="#">酒店<span class="sjx"></span></a></li>
+					<li><a href="#">景区<span class="sjx"></span></a></li>
+					<li><a href="#">线路<span class="sjx"></span></a></li>
+					<li><a href="#">文娱<span class="sjx"></span></a></li>
+					<li><a href="#">六觉新疆<span class="sjx"></span></a></li>
+				</ul>
+				<div class="search">
+					<input type="text" placeholder="搜索目的地/景区/酒店"><span><img src="../../img/public-icon-soo.png"
+							alt=""></span>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="banner">
+		<img src="../../img/public-banner-01.jpg" alt="">
+	</div>
+	<div id="">
+		<div class="content-int">
+			<!--面包屑-->
+			<div class="content-width">
+				<div class="crumbs"><span><img src="../../img/list/lb_icon_home.png" alt="" /></span><span
+						class="m_l_9"></span>您现在所在的位置：<span><a href=" ">首页</a>>&nbsp;</span>线路详情页</div>
+			</div>
+			<!--左右-->
+			<div class="g-box content-width" style="display:flex;">
+				<!--zuo-->
+				<div class="g-listbox-l m-pdlist">
+					<div class="top-left-img top-left-img-bg top-left-img-margin">
+						<div>
+							<div class="top-left-img-img"><img src="../../img/list/lb_pic_224x170.jpg" alt="" /></div>
+							<div class="top-left-img "
+								style="width:402px;margin-top: 18px;justify-content: space-between;">
+								<div class="top-left-img-left">
+									<img src="../../img/details/xq_icon_sj-left.png" alt="" />
+								</div>
+								<div><img src="../../img/details/xq_pic-100x70.jpg" alt="" class="top-left-img-con" />
+								</div>
+								<div><img src="../../img/details/xq_pic-100x70.jpg" alt="" class="top-left-img-con" />
+								</div>
+								<div><img src="../../img/details/xq_pic-100x70.jpg" alt="" class="top-left-img-con" />
+								</div>
+								<div class="top-left-img-left">
+									<img src="../../img/details/xq_icon_sj-right.png" alt="" />
+								</div>
+							</div>
+
+							<div class="calendar-box demo-box"></div>
+
+						</div>
+						<div class="content_details_left_title">
+							<p class="content_details_left_banner_title">
+								天山大峡谷丶克孜尔千佛洞丶巴楚红霞湾点丶喀什老城丶艾提尕尔清真寺丶卡拉库里湖丶帕米尔高原双飞6日游
+							</p>
+							<div class="content_details_left_banner_price">
+								<p>&yen;<span class="price">4380</span><b>起</b><del
+										class="Market-price">门市价:&nbsp;&nbsp;&yen;&nbsp;<b>226</span></b></p>
+							</div>
+							<p class="content_details_left_banner_time">出游日期:<span class="time">2019-12-12</span></p>
+							<p class="ticket_type"><span class="ticket_true">成人票</span><span
+									class="ticket">儿童票</span><span class="ticket">优惠票</span></p>
+							<div style="margin-top: 8px">
+								<span style="color: #008ada;">27</span>条用户点评&nbsp;&nbsp;|
+								<span style="margin-left: 10px; color: #ff5555;">2899</span>人购买
+							</div>
+							<div class="Submit_collection">
+								<button class="Reserve">立即预定</button><button class="Collection"><img
+										src="../../img/details/xq_sc_n.png" alt=""> 收藏宝贝(<span>3</span>人气)</button>
+							</div>
+							<div class="Explain">
+								<img src="../../img/Line\douhao.png" alt="">
+								<p class="Explain_content">全程无任何添加景点,无任何缩减行程的行为,让您的旅程更放心,全程甄选高标准酒店,喀什安排两晚五星住宿.</p>
+							</div>
+							<div class="Starting_price">
+								<p style="margin-bottom: 15px; font-weight: 550;">起价说明</p>
+								<p class="Starting_price_content">
+									此起价时一位成人参加本线路的最低价格,最终价格会因您所选择的出发日期丶出行人数丶住宿标准不同二有所差异.鼠标放到日历价格上,可查阅当日价格详情.
+								</p>
+
+							</div>
+						</div>
+
+					</div>
+					<div class="top-left-img-bg" style="margin-top: 30px;padding-bottom: 60px;">
+						<div style="width: 100%;background: #6284a3;height:46px;display: flex;">
+							<div class="mid-nav on">产品详情</div>
+							<div class="mid-nav">预定须知</div>
+							<div class="mid-nav mid-na">游客点评<span style="color: #ffea00;">（18）</span></div>
+						</div>
+						<div style="margin-left: 27px;margin-top:27px ;">
+							<img src="../../img/details/xq_con_icon_1.png" alt="" />&nbsp;
+							<span style="color: #008ADA;font-size: 16px;font-weight: 600;">产品详情</span>
+						</div>
+						<div
+							style="margin-left: 27px;margin-top: 22px;font-size: 12px;color: #666666;height: 20px;line-height: 20px;text-indent: 24px;margin-bottom: 68px;">
+							新疆地处亚欧大陆腹地，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、吉尔吉斯斯坦、塔吉克斯坦、巴基斯坦、蒙古、印度、阿富汗斯坦八国接壤，在历史上是古丝绸之路的重要通道，现在是第二座“亚欧大陆桥”的必经之地，战略位置十分重要。新疆现有55个民族成份在历史上是古丝绸之路的重要通道，现在是第二座“亚欧大陆桥”的必经之地，战略位置十分重要。新疆现有55个民族成份
+							[3]
+						</div>
+						<div style="width: 100%;text-align: center;">
+							<img style="width: 600px;height: 380px;" src="../../img/details/xq_pic_con-big.jpg"
+								alt="" />
+						</div>
+						<div
+							style="margin-left: 27px;margin-top: 34px;font-size: 12px;color: #666666;height: 20px;line-height: 20px;text-indent: 24px;">
+							新疆地处亚欧大陆腹地，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、吉尔吉斯斯坦、塔吉克斯坦、巴基斯坦、蒙古、印度、阿富汗斯坦八国接壤，在历史上是古丝绸之路的重要通道，现在是第二座“亚欧大陆桥”的必经之地，战略位置十分重要。新疆现有55个民族成份在历史上是古丝绸之路的重要通道，现在是第二座“亚欧大陆桥”的必经之地，战略位置十分重要。新疆现有55个民族成份
+							[3]
+
+						</div>
+						<br /><br />
+						<div style="margin-left: 27px;margin-top:30px ;">
+							<img src="../../img/details/xq_con_icon_2.png" alt="" />&nbsp;
+							<span style="color: #008ADA;font-size: 16px;font-weight: 600;">预定须知</span>
+						</div>
+						<div style="margin-left: 27px;margin-top:30px;">
+							<p style="height: 12px;line-height: 12px; margin-top: 10px;">
+								1.网上订票很方便，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、</p>
+							<p style="height: 12px;line-height: 12px; margin-top: 10px;">
+								2.网上订票很方便，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、</p>
+							<p style="height: 12px;line-height: 12px; margin-top: 10px;">
+								3.网上订票很方便，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、</p>
+						</div>
+						<div style="margin-left: 27px;margin-top:34px ;">
+							<img src="../../img/details/xq_con_icon_2.png" alt="" />&nbsp;
+							<span style="color: #008ADA;font-size: 16px;font-weight: 600;">游客点评</span>
+						</div>
+						<div
+							style="width: 94%;height: 33px;background: #F0F0F0;margin-left: 27px;margin-top: 21px;display: flex;">
+							<div class="nav-pj" style="margin-left: 13px">
+								<input type="radio" name="1" />
+								<div style="margin-left: 7px;">全部评价</div>
+								<div style="margin-left: 10px;">(2)</div>
+							</div>
+							<div class="nav-pj">
+								<input type="radio" name="1" />
+								<div style="margin-left: 7px;">好评</div>
+								<div style="margin-left: 10px;">(2)</div>
+							</div>
+							<div class="nav-pj">
+								<input type="radio" name="1" />
+								<div style="margin-left: 7px;">中评</div>
+								<div style="margin-left: 10px;">(2)</div>
+							</div>
+							<div class="nav-pj">
+								<input type="radio" name="1" />
+								<div style="margin-left: 7px;">差评</div>
+								<div style="margin-left: 10px;">(2)</div>
+							</div>
+							<div class="nav-pj">
+								<input type="radio" name="1" />
+								<div style="margin-left: 7px;">晒单</div>
+								<div style="margin-left: 10px;">(2)</div>
+							</div>
+						</div>
+						<div style="margin-left: 27px;margin-top:34px ;">
+							<img src="../../img/details/xq_con_icon_3.png" alt="" />&nbsp;&nbsp;
+							<span style="color: #666;font-size: 12px;">好评</span>&nbsp;&nbsp;&nbsp;
+							<span style="color: #999;font-size: 12px;">会员-ma936</span>
+						</div>
+						<div
+							style="margin-left: 27px;margin-top: 10px;font-size: 12px;color: #666666;height: 20px;line-height: 20px；">
+							网上订票很方便，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、吉尔吉斯斯坦、塔吉克斯坦、巴基斯坦、蒙古、印度、阿富汗斯坦八国接壤，在历史上是古丝绸之路的重要通道，现在是第二座“亚欧大陆桥”的必经之地，战略位置十分重要。
+
+						</div>
+						<div style="margin-top: 21px;margin-left: 27px;">
+							<img src="../../img/details/xq_pic_left_01.jpg" class="middle-img-p" />
+							<img src="../../img/details/xq_pic_left_01.jpg" class="middle-img-p"
+								style="margin-left: 10px;" / />
+						</div>
+						<div style="margin-left: 27px;margin-top:34px ;">
+							<img src="../../img/details/xq_con_icon_3.png" alt="" />&nbsp;&nbsp;
+							<span style="color: #666;font-size: 12px;">好评</span>&nbsp;&nbsp;&nbsp;
+							<span style="color: #999;font-size: 12px;">会员-ma936</span>
+						</div>
+						<div
+							style="margin-left: 27px;margin-top: 10px;font-size: 12px;color: #666666;height: 20px;line-height: 20px；">
+							网上订票很方便，陆地边境线5600多公里，周边与俄罗斯、哈萨克斯坦、
+
+						</div>
+
+					</div>
+					<div class="top-left-img-bg" style="margin-top: 30px;padding-bottom: 60px;">
+						<div>
+							<div class="m-bbox">
+								<div class="m-bbox-tle" style="">
+									
+									<span class="syicon syicon-arrow"></span>
+								</div>
+									<span class="right_title">推荐酒店 
+									<img class="biao" src="../../img/public_pic_tit_sj.png" alt=""></span>
+							</div>
+							<p style="width:100%;height:0px;background:#f0f0f0 ;"></p>
+							<div style="display: flex; margin-top: 20px;">
+								<div style="margin-left: 21px;">
+									<div> <img src="../../img/details/xq_pic-202x150.jpg" alt="" class="bootom-img-f" />
+									</div>
+									<div
+										style="width:202px;margin-top: 16px;display: flex;justify-content: space-between;">
+										<div>
+											<p class="bootom-img-p1">丽都酒店</p>
+											<p class="bootom-img-p">销量23</p>
+										</div>
+										<div class="bootom-img-d">去看看</div>
+
+									</div>
+								</div>
+								<div style="margin-left: 20px;">
+									<div> <img src="../../img/details/xq_pic-202x150.jpg" alt="" class="bootom-img-f" />
+									</div>
+									<div
+										style="width:202px;margin-top: 16px;display: flex;justify-content: space-between;">
+										<div>
+											<p class="bootom-img-p1">丽都酒店</p>
+											<p class="bootom-img-p">销量23</p>
+										</div>
+										<div class="bootom-img-d">去看看</div>
+
+									</div>
+								</div>
+								<div style="margin-left: 20px;">
+									<div> <img src="../../img/details/xq_pic-202x150.jpg" alt="" class="bootom-img-f" />
+									</div>
+									<div
+										style="width:202px;margin-top: 16px;display: flex;justify-content: space-between;">
+										<div>
+											<p class="bootom-img-p1">丽都酒店</p>
+											<p class="bootom-img-p">销量23</p>
+										</div>
+										<div class="bootom-img-d">去看看</div>
+
+									</div>
+								</div>
+								<div style="margin-left: 20px;">
+									<div> <img src="../../img/details/xq_pic-202x150.jpg" alt="" class="bootom-img-f" />
+									</div>
+									<div
+										style="width:202px;margin-top: 16px;display: flex;justify-content: space-between;">
+										<div>
+											<p class="bootom-img-p1">丽都酒店</p>
+											<p class="bootom-img-p">销量23</p>
+										</div>
+										<div class="bootom-img-d">去看看</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="g-listbox-r m-pdlist">
+					<div class="top-right-img-bg">
+
+						<div class="m-bbox">
+								<span class="right_title">商品精选 
+									<img class="biao" src="../../img/public_pic_tit_sj.png" alt=""></span>
+						</div>
+						<div class="bgfff bg-yin">
+							<div class="g-listbox-r-child">
+								<div style="position: relative;">
+									<img src="../../img/details/xq_pic_con-big.jpg" alt="" class="img-left" />
+									<div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+									<div class="g-listbox-r-child-head">NO.1</div>
+								</div>
+								<div class="shop-message">
+									<div class="g-listbox-r-child-p"><span class="price"><span
+												class="f14">&yen;</span><span class=""
+												style="">1998</span></span>&nbsp;&nbsp;起</div>
+									<div class="g-listbox-r-child-p2">立即抢购</div>
+								</div>
+								<div style="display: flex; padding: 0 15px; margin-top: 32px;padding-bottom: 13px;">
+									<div class="r-img-top"><img src="../../img/details/xq_icon_sj-bot.png" alt="" />
+									</div>
+									<div class="r-img-top" style="margin-left: 32px"><img
+											src="../../img/details/xq_icon_sj-top.png" alt="" /></div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="top-right-img-bg m_t_30">
+						<div class="m-bbox">
+						
+							<span class="right_title">飞马智游旅行社有限公司 
+								<img class="biao" src="../../img/public_pic_tit_sj.png" alt=""></span>
+						</div>
+						<div class="r-img-box">
+							<img src="../../img/details/xq_ri_pic_129x70.jpg" alt=""
+								style="width: 129px;height:70px " />
+						</div>
+						<div style="width: 100%; text-align: center;margin-top: 21px;color:#666;"> 店铺评分<span
+								style="color: #999">4.2</span></div>
+						<div style="display: flex;justify-content: space-around;color: #666666;margin-top: 22px;">
+							<p>商品描述</p>
+							<p>服务态度</p>
+							<p>描述相符</p>
+						</div>
+						<div style="display: flex;justify-content: space-around;color: #FF5555;">
+							<p>4.0</p>
+							<p>3.0</p>
+							<p>5.0</p>
+						</div>
+						<div style="margin-top: 21px;text-align: center;padding-bottom: 30px;">
+							<button style="width: 76px;height: 30px; background:#008ADA;border: none;color: white;">
+								进入店铺
+							</button>
+							<button
+								style="width: 76px;height: 30px;background: #67c401;border: none;color: white;">收藏店铺</button>
+						</div>
+						<div>
+
+						</div>
+					</div>
+					<div class="m-storesearch m_t_30">
+						<div class="top-right-img-bg">
+							<div class="m-bbox">
+								<span class="right_title">搜本店 
+									<img class="biao" src="../../img/public_pic_tit_sj.png" alt=""></span>
+							</div>
+							<div class="bbox-cont f-pdg-20">
+								<dl class="input-dl">
+									<dt>关键字：</dt>
+									<dd>
+										<input class="input-text" id="storeKeyword" placeholder="">
+									</dd>
+								</dl>
+								<dl class="input-dl">
+									<dt>价格：</dt>
+									<dd class="twoinput clearfix">
+										<input class="input-text" id="startPrice" placeholder="¥">
+										<span class="line">-</span>
+										<input class="input-text" id="endPrice" placeholder="¥">
+									</dd>
+								</dl>
+								<div class="shop-btn">
+									<a href="javascript:;" class="btnlink" onclick="getProductInStore()">搜索</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="top-right-img-bg m_t_30">
+
+						<div class="m-bbox">
+							<span class="right_title">本店分类 
+								<img class="biao" src="../../img/public_pic_tit_sj.png" alt=""></span>
+						</div>
+					</div>
+					<div class="top-right-img-bg m_t_30">
+						<div class="m-bbox">
+							
+							<span class="right_title">看了又看 
+								<img class="biao" src="../../img/public_pic_tit_sj.png" alt=""></span>
+						</div>
+						<div class="bgfff bg-yin">
+							<div class="g-listbox-r-child">
+								<div style="position: relative;"><img src="../../img/list/lb_pic_224x170.jpg" alt=""
+										class="img-left">
+									<div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+								</div>
+							</div>
+							<div class="g-listbox-r-child">
+								<div style="position: relative;"><img src="../../img/list/lb_pic_224x170.jpg" alt=""
+										class="img-left">
+									<div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+								</div>
+							</div>
+							<div class="g-listbox-r-child">
+								<div style="position: relative;"><img src="../../img/list/lb_pic_224x170.jpg" alt=""
+										class="img-left">
+									<div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<footer>
+		<div class="contact">
+			<ul class="Hotline">
+				<li class="Hotline_line">
+					<img src="../../img/public-end-icon-phone.png" alt="">
+					<div>
+						<p>服务热线</p>
+						<p>400-123-456</p>
+					</div>
+				</li>
+				<li class="Hotline_line">
+					<img src="../../img/public-end-icon-mail.png" alt="">
+					<p style="line-height: 2.9;">意见反馈</p>
+				</li>
+			</ul>
+			<ul class="Opinion">
+				<li class="first_title">手游新疆旅游网</li>
+				<li>覆盖全疆100多个县</li>
+				<li>10,000,000</li>
+				<li>8030家酒店</li>
+				<li>1000家新疆特色餐饮</li>
+				<li>手游新疆APP带您领略新疆风貌</li>
+			</ul>
+			<ul class="Opinion">
+				<li class="first_title">关于我们</li>
+				<li>关于手游新疆</li>
+				<li>联系我们</li>
+				<li>隐私政策</li>
+				<li>商标声明</li>
+				<li>新疆非遗入住协议</li>
+				<li>商城平台服务协议</li>
+				<li>网站地图</li>
+			</ul>
+			<ul class="Opinion">
+				<li class="first_title">快速导航</li>
+				<li>门票购买</li>
+				<li>线路选择</li>
+				<li>旅游特价</li>
+				<li>租车服务</li>
+				<li>旅游问答</li>
+				<li>订火车票</li>
+				<li>订购机票</li>
+				<li>旅游保险</li>
+				<li>旅游资讯</li>
+				<li>APP下载</li>
+			</ul>
+			<div class="QR_code">
+				<p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+				<img src="../../img/public-end-ewm-1.jpg" alt="">
+				<p class="QR_code_content">下载有惊喜哦</p>
+			</div>
+			<div class="QR_code">
+				<p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+				<img src="../../img/public-end-ewm-2.jpg" alt="">
+				<p class="QR_code_content">快来关注我吧</p>
+			</div>
+
+		</div>
+		<div class="link">
+			<p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span>
+			</p>
+			<p>友情链接:<span>百度网旅游</span>
+				<span>途牛网旅游</span>
+				<span>人民网旅游</span>
+				<span>奇艺旅游</span>
+			</p>
+		</div>
+		<div class="website">
+			<div class="love">
+				<p>新疆的旅游路上,我们一直都在</p>
+				<p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png"
+						alt=""><img src="../../img/public-end_icon-3.png" alt=""></p>
+			</div>
+			<div class="Development">
+				<p><img src="../../img/public-bot-logo.png" alt=""></p>
+				<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com) 版权所有</span><span>新ICP备18001279号-1</span></p>
+				<p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050
+					</span></p>
+			</div>
+		</div>
+
+	</footer>
+</body>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/Line/calendar-pro.js"></script>
+<script>
+
+	$('.calendar-box').calendar({
+		ele: '.demo-box', //依附
+		title: '',
+		//			beginDate : '2017-10-07',
+		//			endDate : '2017-12-04',
+		data: [
+			{ date: '2017-10-07', data: '107' },
+			{ date: '2017-10-08', data: '108' },
+			{ date: '2017-10-09', data: '109' },
+			{ date: '2017-10-10', data: '110' },
+			{ date: '2017-10-11', data: '111' },
+			{ date: '2017-10-12', data: '112' },
+			{ date: '2017-10-13', data: '113' },
+			//				{date:'2017-10-14',data:'114'},
+			{ date: '2017-10-15', data: '115' },
+			{ date: '2017-10-16', data: '116' },
+			{ date: '2017-10-17', data: '117' },
+			{ date: '2017-10-18', data: '118' },
+			{ date: '2017-10-19', data: '119' },
+			{ date: '2017-10-20', data: '120' },
+			{ date: '2017-10-21', data: '121' },
+			{ date: '2017-10-22', data: '122' },
+			{ date: '2017-10-23', data: '123' },
+			{ date: '2017-10-24', data: '124' },
+			{ date: '2017-10-25', data: '125' },
+			{ date: '2017-10-26', data: '126' },
+			{ date: '2017-10-27', data: '127' },
+			{ date: '2017-10-28', data: '128' },
+			{ date: '2017-10-29', data: '129' },
+			//				{date:'2017-10-30',data:'130'},
+			{ date: '2017-10-31', data: '131' },
+			{ date: '2017-11-01', data: '101' },
+			{ date: '2017-11-02', data: '102' },
+			{ date: '2017-11-03', data: '103' },
+			{ date: '2017-11-04', data: '104' },
+			{ date: '2017-11-05', data: '105' },
+			{ date: '2017-11-06', data: '106' },
+			{ date: '2017-11-07', data: '107' },
+			{ date: '2017-11-08', data: '108' },
+			{ date: '2017-11-09', data: '109' },
+			{ date: '2017-11-10', data: '110' },
+			{ date: '2017-11-11', data: '111' },
+			//				{date:'2017-11-12',data:'112'},
+			{ date: '2017-11-13', data: '113' },
+			{ date: '2017-11-14', data: '114' },
+			{ date: '2017-11-15', data: '115' },
+			{ date: '2017-11-16', data: '116' },
+			{ date: '2017-11-17', data: '117' },
+			{ date: '2017-11-18', data: '118' },
+			{ date: '2017-11-19', data: '119' },
+			{ date: '2017-11-20', data: '120' },
+			{ date: '2017-11-21', data: '121' },
+			{ date: '2017-11-22', data: '122' },
+			{ date: '2017-11-23', data: '123' },
+			{ date: '2017-11-24', data: '124' },
+			//				{date:'2017-11-25',data:'125'},
+			{ date: '2017-11-26', data: '126' },
+			{ date: '2017-11-27', data: '127' },
+			{ date: '2017-11-28', data: '128' },
+			{ date: '2017-11-29', data: '129' },
+			{ date: '2017-11-30', data: '130' },
+			{ date: '2017-12-01', data: '121' },
+			{ date: '2017-12-02', data: '122' },
+			{ date: '2017-12-03', data: '123' },
+			{ date: '2017-12-04', data: '124' },
+		]
+	});
+	function getActive() {
+		var data = $('.calendar-box').calendarGetActive();
+		console.log(data);
+		alert(data.date + "--¥" + data.money);
+	}
+
+</script>
+
+</html>

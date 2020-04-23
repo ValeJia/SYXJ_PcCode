@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城下载</title>
+    <link rel="stylesheet" href="../../css/Login/download.css">
+</head>
+<body>
+    <nav>
+        <div class="iphone"><img src="../../img/scxz-pic-01.png" alt=""></div>
+        <div class="iphone_sweep">
+            <div class="logo"><img src="../../img/scxz-dlogo.png" alt=""></div>
+            <div class="Sweep_code">
+                <div><img src="../../img/scxz-icon-01.png" alt="">IPhone</div>
+                <div><img src="../../img/scxz-icon-02.png" alt="">Android</div>
+                <div> <img src="../../img/scxz-icon-03.png" alt="">扫码下载</div>
+            </div>
+        </div>
+
+    </nav>
+</body>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.Sweep_code').find('div').hover(function(){
+        
+        $(this).css('background','rgba(255,255,255,0.16)')
+    },function(){
+        $(this).css('background','rgba(255,255,255,0.05)')
+    })
+</script>
+</html>

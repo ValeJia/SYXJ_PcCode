@@ -1,0 +1,245 @@
+
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.login{
+    width: 100%;
+    height: 100%;
+
+}
+.login-top{
+    height: 80px;
+    width: 100%;
+    background: #fff;
+}
+.topone{
+    height: 100%;
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+   
+
+}
+.bk{
+    height: 40px;
+    border-left: 1px solid #333;
+    margin: 0 16px;
+}
+.txt{
+    font-size: 22px;
+    color: #333;
+    font-family:思源黑体;
+}
+.login-content{
+    width: 100%;
+    height: 760px;
+    background: url(../../img/Login/sjrz-pic-bg-01.jpg);
+}
+.content1{
+    width: 1200px;
+    margin: 0 auto;
+    height: 83px;
+    padding-left: 30px;
+    line-height: 83px;
+}
+.content1 p{
+    color: #ffe614;
+    font-size: 18px;
+    font-family: 思源黑体;
+}
+.content1 span{
+    margin-left: 10px;
+    color: #fff;
+}
+.content2{
+    width: 1200px;
+    /* height: 500px; */
+    background: #fff;
+    margin: 0 auto;
+}
+.information{
+    width: 1200px;
+    margin: 0 auto;
+}
+.kuang{
+    width: 100%;
+    
+    
+    padding-top: 30px;
+}
+.kuang-top{
+    display: flex;
+    padding-left: 10px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    z-index: 999;
+    align-items: center;
+    padding-bottom: 8px;
+    
+}
+.kuang-top p{
+    width: 125px;
+    margin: 0;
+    padding: 0;
+}
+.kuang-ipt{
+    width: 855px;
+    height: 580px;
+    
+    margin: 0 auto;
+    margin-top: 29px;
+}
+.kuang-ipt ul{
+    list-style: none;
+    
+}
+.kuang-ipt li{
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-weight: 600;
+    display: inline-block;
+    width: 92px;
+    text-align: right;
+    font-size: 12px;
+    font-family: 宋体;
+    color: #333;
+}
+.kuang-ipt li{
+    padding-top: 33px;
+}
+.login-dl{
+    display: flex;
+}
+.login-dl p{
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 12px;
+}
+.Password-strength span:first-of-type {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #ff5555;
+    opacity: 0.33;
+    margin-left: 7px;
+}
+.Password-strength span:nth-of-type(2) {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background:  #ff5555;
+    opacity: 0.66;
+    margin-left: 7px;
+}
+.Password-strength span:nth-of-type(3){
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background:  #ff5555;
+    opacity: 0.99;
+    margin-left: 7px;
+}
+.down{
+    padding-top: 52px;
+}
+.ipt-one{
+    padding-left: 10px;
+    font-size: 12px;
+    width: 442px;
+    height: 33px;
+}
+.ipt-two{
+    padding-left: 10px;
+    font-size: 12px;
+    width: 282px;
+    height: 33px;
+}
+.Submission{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 38px;
+}
+.Submission button{
+    width: 151px;
+    height: 42px;
+}
+.Submission button:first-child{
+    margin-top: 20px;
+    border: solid 1px transparent;
+    background: #1b60a0;
+    color: #fff;
+    font-size: 14px;
+    font-family: 思源黑体;
+}
+.Submission button:last-child{
+    margin-top: 20px;
+    margin-left: 15px;
+    border: solid 1px transparent;
+    background: #ccc;
+    color: #fff;
+    font-size: 14px;
+    font-family: 思源黑体;
+}
+footer{
+    margin-top: 0;
+}
+.kuang-ipt .tishi {
+    display: block;
+    height: 20px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: right;
+    color: red;
+    display: none;
+}
+
+.kuang-ipt .psd {
+    width: 282px;
+    height: 33px;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+tbody {
+    display: flex;
+}
+
+.qiangdu {
+    width: 150px;
+    margin-top: 8px;
+}
+
+.qiangdu td {
+    color: #fff;
+    width: 70px;
+}
+
+.kuang-ipt .tishi {
+    display: block;
+    height: 20px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    color: red;
+    display: none;
+}

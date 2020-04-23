@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手游新疆-酒店店铺页</title>
+	<link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common/public.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/index/index.css"/>
+	<link rel="stylesheet" href="../../css/common/Scenic_spot.css">
+	<link rel="stylesheet" href="../../css/common/Shop_front_page.css">
+	<link rel="stylesheet" type="text/css" href="../../css/index/home_index.css"/>
+	<style type="text/css">
+		.Corner_marker_content{
+			width: 100%;
+		}
+		.Best_Sellers_list figure{
+			background: #fff; 
+		}
+		.zhezhao{
+			padding: 0 10px;
+			height: 35px;
+		}
+		
+		
+		/*正式代码样式*/
+		.store-info-box{
+			width: 100%;
+			/*height: 440px;*/
+			padding: 30px 32px;
+			margin-top: -65px;
+			position: relative;
+			z-index: 5;
+		}
+		.store-icon{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.store-info{
+			margin-top: 0;
+			/*margin-top: 48px;*/
+		}
+		.store-info-left{
+			margin-top: 48px;
+		}
+		.store-info-left p{
+			line-height: 24px;
+			color: #666;
+			font-size: 12px;
+		}
+		.store-info-left-item{
+			padding-bottom: 31px;
+		}
+		.store-info-left-item:last-child{
+			border-top: 1px solid #ededed;
+			padding-top: 33px;
+		}
+		.store-info-left-item .row{
+			line-height: 24px;
+			width: 100%;
+		}
+		.hotelSupport{
+			width: 100%;
+			margin-top: 5px;
+		}
+		.hotelSupport div{
+			float: left;
+			width: 96px;
+			padding: 4px 0;
+			margin-right: 10px;
+			background: rgba(231,238,244,1);
+			background: #e7eef4;
+			color: #333;
+		}
+		
+		.filter-wrapper {
+			padding-top: 30px;
+		    -webkit-box-align: baseline;
+		    -webkit-align-items: baseline;
+		    -ms-flex-align: baseline;
+		    align-items: baseline;
+		    color: #242629;
+		    background: #fff;
+		    z-index: 2;
+		    width: 100%;
+		    overflow: hidden;
+		}
+		.filter-wrapper .filter-tab-box {
+		    -webkit-box-align: center;
+		    -webkit-align-items: center;
+		    -ms-flex-align: center;
+		    align-items: center;
+		    -webkit-box-flex: 1;
+		    -webkit-flex: 1;
+		    -ms-flex: 1;
+		    flex: 1;
+		    white-space: nowrap;
+		    overflow-x: auto;
+		    -webkit-overflow-scrolling: touch;
+		}
+		.filter-tab {
+			display: inline-block;
+			width: 106px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+		    position: relative;
+		    margin-left: 30px;
+		    color: #333;
+		    border: 1px solid #d7d7d7;
+		    font-size: 12px;
+		    font-weight: 400;
+		    cursor: pointer;
+		}
+		.filter-tab:hover{
+			border: 1px solid #ee5555;
+			color: #ee5555;
+		}
+		.filter-tab.on{
+			border: 1px solid #ffa0a1;
+			color: #ff5555;
+		}
+		.commodity-list{
+			margin: 32px 0 0;
+		}
+		.commodity-list-item{
+			padding: 0 30px;
+			margin: 20px 0;
+		}
+		.commodity-list-item:hover{
+			background: #e5f4fb;
+		}
+		
+		.rate-plan-wrapper{
+			padding-bottom: 10px;
+		}
+		.rate-plan-wrapper .media-object{
+			width: 120px;
+			height: 100px;
+			margin-right: 10px;
+		}
+		.rate-plan-wrapper .commodity-list-item .shop-name{
+			 font-size: 18px;
+			 color: #333;
+		}
+		.rate-plan-wrapper .media-right{
+			width: 15%;
+		}
+		.commodity-list-item .media-right .buyBtn {
+		    position: absolute;
+		    right: 0px;
+		    /*top: 35px;*/
+		    bottom: 0;
+		    width: 75px;
+		    display: inline-block;
+		    height: 30px;
+		    border-radius: 2px;
+		    text-align: center;
+		    line-height: 30px;
+		    background: #ee5555;
+		    color: #fff;
+		    font-size: 14px;
+		}
+		.commodity-list-item .media-right .buyBtn:hover {
+			background: #ff5555;
+		}
+		
+		.commodity-list-item .pro-price{
+			float: right;
+			/*text-align: right;*/
+			padding-top: 0;
+			line-height: normal;
+			color: #666;
+			font-size: 14px;
+			margin-top: 35px;
+		}
+		.commodity-list-item .pro-price dfn{
+			padding-right: 5px;
+			font-size: 28px;
+			font-style: italic;
+		}
+		
+		
+		footer{
+			margin-top: 0px;
+		}
+	</style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_title">
+            <div class="nav_title_head">
+                <p class="nav_title_city"><span>2019年12月10号 星期二 </span><span>新疆天池 晴 低温 -6℃~高温3℃ 微风2级</span></p>
+                <div class="nav_title_city fujian"><a href="#">登录</a><span class="fenge">|</span><a class="fenge"
+                        href="#">注册</a><a href="#">收藏<div class="sjx"></div></a><a href="#">购物车<div class="sjx"></div>
+                    </a><a href="#">客服<div class="sjx"></div></a>
+                    <!-- <div class="login1"><img src="../../img/public-top-icon-mobile.png" alt=""></div>
+                    <div class="login2"><img src="../../img/public-top-icon-wx.png" alt=""></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav_list">
+                <div class="nav_list_logo">
+                    <img src="../../img/public-top-logo.png" alt="">
+                </div>
+                <span class="fgx"></span>
+                <div class="shop">
+                    <p class="shop_title"><span>飞马之旅旅行社有限公司</span>
+                        <!-- <button class="goTO_shop">进入店铺</button> -->
+                    </p>
+                    <p class="shop_score">[&nbsp;&nbsp;关注人数<span
+                            class="shop_score_describe Fraction">4.97</span>|&nbsp;&nbsp;商品评分<span
+                            class="shop_score_service Fraction">3.85</span>|&nbsp;&nbsp;综合评分<span
+                            class="shop_score_logistics Fraction">3.99</span>&nbsp;&nbsp;]</p>
+                    <p><button class="Collection_shop">+ 收藏店铺</button></p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="搜索目的地/景区/酒店"><span class="seach_all Search">搜全网</span><span
+                        class="search_this Search">搜本店</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev swiper-button-black"></div>
+            <div class="swiper-button-next  swiper-button-black"></div>
+        </div>
+    </div>
+    <div class="content" style="display: none;">
+        <div class="contenjiong'pot_nav">
+            <ul class="breadcrumb">
+                <li class="active"><img src="../../img/lb_icon_home.png" alt="">您现在所在的位置:</li>
+                <li class="home"><a href="#">首页</a> <span class="divider">&gt;</span></li>
+                <li class="home"><a href="#">特产</a> <span class="divider">></span></li>
+                <li class="home"><a href="#">特产详情</a> <span class="divider">></span></li> 
+                <li class="active">新疆飞马智旅旅行社有限公司</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-int">
+    	<div class="content-width">
+    		<div class="g-box">
+    			<div class="store-info-box bgfff box_shadow">
+    				<div class="store-icon">
+    					<img src="../../img/dp-pic-02.png"/>
+    				</div>
+    				<div class="media store-info">
+    					<div class="media-body ">
+    						<div class="store-info-left">
+    							<div class="store-info-left-item">
+    								<h3 class="c333 f22 m_b_30">乐活智能酒店</h3>
+	    							<p class="ellipsis ">地址：乐活小镇</p>
+	    							<p class="">营业时间：24h</p>
+    							</div>
+    							<div class="store-info-left-item">
+    								<div class="c333 f16 m_b_14">酒店信息</div>
+    								<div class="row">
+									  <div class="col-md-6"><span class="m_r_20">入住</span><span class="c333 f_w_bolder">06：00至14：00</span></div>
+									  <div class="col-md-6"><span class="m_r_20">离店</span><span class="c333 f_w_bolder">06：00至14：00</span></div>
+									</div>
+									<div class="row">
+									  <div class="col-md-6"><span class="m_r_20">开业</span><span class="c333 f_w_bolder">2015</span></div>
+									  <div class="col-md-6"><span class="m_r_20">规模</span><span class="c333 f_w_bolder">46间</span></div>
+									</div>
+									<div class="row">
+									  <div class="col-md-12"><span class="m_r_20">设施服务</span></div>
+									</div>
+									<div class="tc hotelSupport clear-both">
+										<div class="">24小时前台</div>
+										<div class="">行李寄存</div>
+										<div class="">停车场</div>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="media-right media-middle">
+    						<a href="javascript:;">
+    							<img class="media-object" src="../../img/details/xq_pic_con-big.jpg" alt="">
+    						</a>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="m_t_30">
+    				<div class="commodity_title ">
+    					<img src="../../img/dp-tit-icon-01.png"/>
+    					<p class="m_b_33"><span class="zhonghua"></span>&nbsp;房型信息&nbsp;<span class="zhonghua"></span></p>
+    				</div>
+    				<div class="bgfff">
+    					<div class="filter-wrapper flex">
+    						<div class="filter-tab-box"><span class="filter-tab on">房间宽敞干净<i class="iconfont"></i></span><span class="filter-tab">房间特别干净<i class="iconfont"></i></span><span class="filter-tab">房间设施舒适<i class="iconfont"></i></span></div>
+    					</div>
+    					<div class="commodity-list">
+    						<ul class="rate-plan-wrapper">
+    							<li class="commodity-list-item">
+    								<div class="media">
+										<div class="media-left media-middle">
+										    <a href="#">
+										      	<img  class="media-object" src="../../img/details/xq_pic-202x150.jpg" alt="" style="width: 120px; height: 100px;">
+										    </a>
+										</div>
+										<div class="media-body">
+										    <!--<h4 class="media-heading shop-name">Middle aligned media</h4>-->
+										    <p class="shop-name">大华家乐-四人间</p>
+										    <div class="c666 f12 m_t_11"><span class="m_r_10">房型&nbsp;</span><span>大床2.0x2.0米1张</span><span> WiFi</span><span>独立卫浴</span><span>有窗</span><span>可住2人</span><span>面积27m</span></div>
+										    <br /><br /><p class="c999 f12 ">房间设施齐全</p>
+										</div>
+										<div class="media-right relative">
+											<div class="pro-price">
+												<dfn><i>¥</i>338</dfn>起
+											</div>
+											<span class="buyBtn">立即抢购</span>
+										</div>
+									</div>
+    							</li> 
+    							<li class="commodity-list-item">
+    								<div class="media">
+										<div class="media-left media-middle">
+										    <a href="#">
+										      	<img  class="media-object" src="../../img/details/xq_pic-202x150.jpg" alt="" style="width: 120px; height: 100px;">
+										    </a>
+										</div>
+										<div class="media-body">
+										    <!--<h4 class="media-heading shop-name">Middle aligned media</h4>-->
+										    <p class="shop-name">大华家乐-四人间</p>
+										    <div class="c666 f12 m_t_11"><span class="m_r_10">房型&nbsp;</span><span>大床2.0x2.0米1张</span><span> WiFi</span><span>独立卫浴</span><span>有窗</span><span>可住2人</span><span>面积27m</span></div>
+										    <br /><br /><p class="c999 f12 ">房间设施齐全</p>
+										</div>
+										<div class="media-right relative">
+											<div class="pro-price">
+												<dfn><i>¥</i>338</dfn>起
+											</div>
+											<span class="buyBtn">立即抢购</span>
+										</div>
+									</div>
+    							</li> 
+    							<li class="commodity-list-item">
+    								<div class="media">
+										<div class="media-left media-middle">
+										    <a href="#">
+										      	<img  class="media-object" src="../../img/details/xq_pic-202x150.jpg" alt="" style="width: 120px; height: 100px;">
+										    </a>
+										</div>
+										<div class="media-body">
+										    <!--<h4 class="media-heading shop-name">Middle aligned media</h4>-->
+										    <p class="shop-name">大华家乐-四人间</p>
+										    <div class="c666 f12 m_t_11"><span class="m_r_10">房型&nbsp;</span><span>大床2.0x2.0米1张</span><span> WiFi</span><span>独立卫浴</span><span>有窗</span><span>可住2人</span><span>面积27m</span></div>
+										    <br /><br /><p class="c999 f12 ">房间设施齐全</p>
+										</div>
+										<div class="media-right relative">
+											<div class="pro-price">
+												<dfn><i>¥</i>338</dfn>起
+											</div>
+											<span class="buyBtn">立即抢购</span>
+										</div>
+									</div>
+    							</li> 
+    							<li class="commodity-list-item">
+    								<div class="media">
+										<div class="media-left media-middle">
+										    <a href="#">
+										      	<img  class="media-object" src="../../img/details/xq_pic-202x150.jpg" alt="" style="width: 120px; height: 100px;">
+										    </a>
+										</div>
+										<div class="media-body">
+										    <!--<h4 class="media-heading shop-name">Middle aligned media</h4>-->
+										    <p class="shop-name">大华家乐-四人间</p>
+										    <div class="c666 f12 m_t_11"><span class="m_r_10">房型&nbsp;</span><span>大床2.0x2.0米1张</span><span> WiFi</span><span>独立卫浴</span><span>有窗</span><span>可住2人</span><span>面积27m</span></div>
+										    <br /><br /><p class="c999 f12 ">房间设施齐全</p>
+										</div>
+										<div class="media-right relative">
+											<div class="pro-price">
+												<dfn><i>¥</i>338</dfn>起
+											</div>
+											<span class="buyBtn">立即抢购</span>
+										</div>
+									</div>
+    							</li> 
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+    			
+    			
+    		</div>
+    	</div>
+    </div>
+    <div class="commodity" style="display: none;">
+        <div class="commodity_title p_b_25">
+            <img src="../../img/dp-tit-icon-01.png" alt="">
+            <p><span class="zhonghua"></span>&nbsp;店铺推荐&nbsp;<span class="zhonghua"></span></p>
+            <div class="commodity_content">
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p class="ellipsis">芦花鸡(小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p class="ellipsis">芦花鸡(小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p class="ellipsis">芦花鸡(小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p class="ellipsis">芦花鸡(小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p class="ellipsis">芦花鸡(小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p class="ellipsis">芦花鸡(小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="Best_Sellers" style="display: none;">
+        <div class="commodity_title ">
+            <img src="../../img/dp-tit-icon-02.png" alt="">
+            <p class="m_b_33"><span class="zhonghua"></span>&nbsp;热卖商品&nbsp;<span class="zhonghua"></span></p>
+        </div>
+        <div class="bgfff p_b_25" >
+        	<div class="Best_Sellers_list bgfff">
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                    <div class="zhezhao">新疆伊犁土尔根新华沟+赛里木湖双卧4日游>追朔土尔根新华的脚步,赛里木湖比u比u比u </div>
+                    <figcaption>
+                        <div class="Scenic_price">
+                            <font>¥<em>1899</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>56
+                                </font>张</span>
+                        </div>
+                    </figcaption>
+                </figure>
+              
+            </div>
+        </div>
+    </div>
+        <footer>
+            <div class="contact">
+                <ul class="Hotline">
+                    <li class="Hotline_line">
+                        <img src="../../img/public-end-icon-phone.png" alt="">
+                        <div>
+                            <p>服务热线</p>
+                            <p>400-123-456</p>
+                        </div>
+                    </li>
+                    <li class="Hotline_line">
+                        <img src="../../img/public-end-icon-mail.png" alt="">
+                        <p style="line-height: 2.9;">意见反馈</p>
+                    </li>
+                </ul>
+                <ul class="Opinion">
+                    <li class="first_title">手游新疆旅游网</li>
+                    <li>覆盖全疆100多个县</li>
+                    <li>10,000,000</li>
+                    <li>8030家酒店</li>
+                    <li>1000家新疆特色餐饮</li>
+                    <li>手游新疆APP带您领略新疆风貌</li>
+                </ul>
+                <ul class="Opinion">
+                    <li class="first_title">关于我们</li>
+                    <li>关于手游新疆</li>
+                    <li>联系我们</li>
+                    <li>隐私政策</li>
+                    <li>商标声明</li>
+                    <li>新疆非遗入住协议</li>
+                    <li>商城平台服务协议</li>
+                    <li>网站地图</li>
+                </ul>
+                <ul class="Opinion">
+                    <li class="first_title">快速导航</li>
+                    <li>门票购买</li>
+                    <li>线路选择</li>
+                    <li>旅游特价</li>
+                    <li>租车服务</li>
+                    <li>旅游问答</li>
+                    <li>订火车票</li>
+                    <li>订购机票</li>
+                    <li>旅游保险</li>
+                    <li>旅游资讯</li>
+                    <li>APP下载</li>
+                </ul>
+                <div class="QR_code">
+                    <p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+                    <img src="../../img/public-end-ewm-1.jpg" alt="">
+                    <p class="QR_code_content">下载有惊喜哦</p>
+                </div>
+                <div class="QR_code">
+                    <p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+                    <img src="../../img/public-end-ewm-2.jpg" alt="">
+                    <p class="QR_code_content">快来关注我吧</p>
+                </div>
+
+            </div>
+            <div class="link">
+                <p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span>
+                </p>
+                <p>友情链接:<span>百度网旅游</span>
+                    <span>途牛网旅游</span>
+                    <span>人民网旅游</span>
+                    <span>奇艺旅游</span>
+                </p>
+            </div>
+            <div class="website">
+                <div class="love">
+                    <p>新疆的旅游路上,我们一直都在</p>
+                    <p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png" alt=""><img
+                            src="../../img/public-end_icon-3.png" alt=""></p>
+                </div>
+                <div class="Development">
+                    <p><img src="../../img/public-bot-logo.png" alt=""></p>
+                    <p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com) 版权所有</span><span>新ICP备18001279号-1</span></p>
+                    <p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050
+                        </span></p>
+                </div>
+            </div>
+
+        </footer>
+</body>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            disableOnInteraction: false, //手动滑动之后不打断播放
+            delay: 2000
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+
+    })
+
+
+</script>
+
+</html>

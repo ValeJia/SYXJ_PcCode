@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>下单页</title>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css" />
+	<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/common/public.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/common/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/index/index.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/specialty/specialty-list.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/pay-order/cart-confirm.css" />
+	<link rel="stylesheet" href="../../css/Scenic/datePicker.css">
+	<style type="text/css">
+		.num {
+			display: inline-block;
+			width: 30px;
+			height: 20px;
+			margin-bottom: 2px;
+			border: solid 1px transparent;
+			text-align: center;
+		}
+
+		.but {
+			cursor: pointer;
+			display: inline-block;
+			font-size: 16px;
+			width: 20px;
+			height: 20px;
+			background: #eaeaea;
+		}
+
+		.fill-information li div>.title {
+			display: inline-block;
+			width: 100px;
+			text-align: right;
+			margin-right: 14px;
+			font-size: 12px;
+			color: #666;
+		}
+
+		.ipt-text {
+			margin-top: 30px;
+		}
+
+		.ipt-text input {
+			width: 282px;
+			height: 33px;
+			border: solid 1px #dbdbdb;
+			padding-left: 12px;
+			margin-right: 0;
+		}
+
+		.ipt-text input::placeholder {
+			color: #999999;
+
+		}
+
+		.fl {
+			float: inherit;
+			;
+		}
+
+		div.dp-popup h2 {
+			background: #738698;
+		}
+
+		.jCalendar thead tr {
+			background: #627587;
+		}
+
+		div.dp-popup a#dp-nav-prev-year,
+		div.dp-popup a#dp-nav-next-year {
+			display: none;
+		}
+
+		.pay-btn-box {
+			width: 100%;
+			margin: 52px 0 48px;
+			text-align: center;
+		}
+		.fill-information li .lxr{
+		display: inline-block;
+		border: solid 1px #c9e4ff;
+		text-align: center;
+		cursor:pointer;
+		width: 146px;
+		height: 33px;
+		margin-left: 10px;
+		color: #008ada;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="">
+		<section class="nav-header">
+			<div class="bgfff">
+				<div class="content-width">
+					<div class="inline-block">
+						<h1>
+							<a href="/"><img id="shouyouxjLogo" src="../../img/place-order/xd-pic-slogo.png" /></a>
+						</h1>
+					</div>
+					<div class="cart_step cart_step_1">
+						<div></div>
+						<ul>
+							<li>选择商品</li>
+							<li class="active">填写核对订单信息</li>
+							<li>成功提交订单</li>
+						</ul>
+					</div>
+
+					<!--<div class="fr" style="display: none;">
+							<div class="">
+								<img src="../../img/place-order/xd-lc_pic_2.png"/>
+							</div>
+							<div class="tc ">
+								<span class="">选择商品</span>
+								<span>填写核对订单信息</span>
+								<span>成功提交订单</span>
+							</div>
+						</div>-->
+				</div>
+			</div>
+		</section>
+		<div class="state-box">
+			<div class="state-bar content-width">
+				支付订单
+			</div>
+		</div>
+	</div>
+
+	<div id="">
+		<!--style="display: none;"-->
+		<div class="content-int">
+			<div class="content-width" style="display: flex;">
+				<!--以下为左右-->
+				<div class="g-listbox-l m-pdlist bgfff">
+					<div class="bgfff">
+						<div class="cart_bt">
+							确认订单信息
+						</div>
+						<div class="cart-table-responsive">
+							<div class="table-responsive">
+								<div class="cart-table-tit" style="display: none;">
+									<div class="thead">
+										<ul class="tr">
+											<li width="47%">商品信息</li>
+											<li width="17%">单价（元）</li>
+											<li width="20%">数量</li>
+											<li>金额（元）</li>
+										</ul>
+									</div>
+								</div>
+								<table class="cart-table-tit">
+									<thead>
+										<tr>
+											<th width="47%">商品信息</th>
+											<th width="17%">单价（元）</th>
+											<th width="20%">数量</th>
+											<th>金额（元）</th>
+										</tr>
+									</thead>
+								</table>
+								<div id="" name="">
+									<input type="hidden" id="storeUuid" value="">
+									<input type="hidden" id="" value="">
+									<span id="contrallnum">
+										<input type="hidden" name="" value="">
+										<span class="select-box clearfix f-fl" id="contrallnum"></span>
+									</span>
+									<div class="cart-table-box">
+										<table class="cart-table y_checktable">
+											<tbody class="r_tz">
+												<!-- 零售商品 -->
+												<tr>
+													<td width="47%" class="y_firsttd">
+														<div class="pic">
+															<a href="/front/productDetail?skuNo=0000369759"
+																target="_blank">
+															</a>
+															<a href="/front/productDetail?skuNo=0000369759"
+																target="_blank">
+																<img src="../../img/list/lb-pic-left-01-202x150.jpg"
+																	alt="">
+															</a>
+														</div>
+														<div class="name f12">
+															<a href="/front/productDetail?skuNo=0000369759"
+																target="_blank">喀纳斯</a>
+															<span class="sx">
+																<span class="y_pdsta">门票：成人票</span>
+															</span>
+														</div>
+														<!-- 循环赠品商品 -->
+
+														<!-- 循环赠品优惠券 -->
+													</td>
+													<td width="17%" class="price">
+														<span class="c333">¥160.0 </span>
+														<input type="hidden" name="productCartDetailUuid_0000369759"
+															value="">
+														<input type="hidden" name="productNowPrice_0000369759"
+															value="620.1">
+														<input type="hidden" id="productBasePrice_1"
+															name="productBasePrice" value="160.0">
+														<input type="hidden" name="productMarketPrice_0000369759"
+															value="398.0">
+														<input type="hidden" id="productUuid" name="productUuid"
+															value="">
+														<input type="hidden" id="nowbuynum1" name="productBuyNum"
+															value="2">
+														<input type="hidden" name="detailNowPromotionUuid" value="">
+														<input type="hidden" name="productType" value="01">
+													</td>
+													<td width="20%">
+														<span class="but">-</span><input class="num" type="text"
+															value="1"><span class="but">+</span>
+													</td>
+													<td class="y_lasttd">
+														<span id="money" class=" f_size14">¥160.0 </span>
+														<input type="hidden" name="productPrice_0000369759"
+															value="620.1">
+													</td>
+												</tr>
+												<tr style="display: none;">
+													<td colspan="2" rowspan="2" class="text_l td_line">
+														<dl class="y_message">
+															<dt class="padd-top">给卖家留言：</dt>
+															<dd>
+																<input type="text"
+																	name="storeNote1c24daaa0beb499282d19a3df3c2c1ac"
+																	maxlength="200" class="form-control"
+																	placeholder="选填：对本次交易的说明">
+															</dd>
+														</dl>
+													</td>
+													<td colspan="3" align="left" class="cart_ztBox">
+														<input type="hidden"
+															id="offlineCouponReduceMoney_1c24daaa0beb499282d19a3df3c2c1ac"
+															name="offlineCouponReduceMoney_1c24daaa0beb499282d19a3df3c2c1ac"
+															value="15.9">
+														<span class="y_mb10">
+															红包抵扣：
+															<b class="item-price-special" id="redmoney">
+																-￥15.90
+															</b>
+														</span>
+													</td>
+
+												</tr>
+												<tr class="text_l" style="display: none;">
+													<td colspan="3" align="left" class="cart_ztBox">
+														<input type="hidden"
+															name="chooseCod_1c24daaa0beb499282d19a3df3c2c1ac"
+															id="chooseCod_1c24daaa0beb499282d19a3df3c2c1ac"
+															value="false">
+														<div class="y_mb10">支付方式：
+															<span class="f_color2">在线支付</span>
+															<input type="hidden"
+																name="payType_1c24daaa0beb499282d19a3df3c2c1ac"
+																value="1">
+														</div>
+														<span class="fr">
+															运费：
+															<b class="item-price-special">
+																<span
+																	id="affixShow_1c24daaa0beb499282d19a3df3c2c1ac">￥10.00</span>
+																<input type="hidden"
+																	id="affix_1c24daaa0beb499282d19a3df3c2c1ac"
+																	name="affix_1c24daaa0beb499282d19a3df3c2c1ac"
+																	value="10.0">
+															</b>
+														</span>
+														<div style="position:relative">
+															配送方式：
+															<input type="radio"
+																name="shipType_1c24daaa0beb499282d19a3df3c2c1ac"
+																id="express_1c24daaa0beb499282d19a3df3c2c1ac" value="1"
+																checked=""> 快递&nbsp;&nbsp;
+														</div>
+													</td>
+												</tr>
+												<tr style="display: none;">
+													<td colspan="5" align="right">
+
+														店铺合计：<b class="fr item-price-special"
+															id="cartPayMoneyShow_1c24daaa0beb499282d19a3df3c2c1ac">¥630.10</b>
+														<input type="hidden"
+															id="cartPayMoney_1c24daaa0beb499282d19a3df3c2c1ac"
+															name="cartPayMoney_1c24daaa0beb499282d19a3df3c2c1ac"
+															value="620.1">
+														<input type="hidden"
+															id="cartTotalMoney_1c24daaa0beb499282d19a3df3c2c1ac"
+															name="cartTotalMoney_1c24daaa0beb499282d19a3df3c2c1ac"
+															value="636.0">
+														<input type="hidden"
+															name="nowCouponDetailUuid_1c24daaa0beb499282d19a3df3c2c1ac"
+															value="">
+														<input type="hidden"
+															name="nowPromotionUuid_1c24daaa0beb499282d19a3df3c2c1ac"
+															value="">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fill-information">
+							<div class="">
+								<ul>
+									<li>
+										<div class="users ipt-text">
+											<span class="title">联系人姓名:</span>
+											<input type="text" placeholder="必填,请填写联系人姓名" /><span
+												class="lxr">设为常用联系人</span>
+										</div>
+										<!-- <div class="times ipt-text">
+											<span class="title">使用日期:</span>
+											<input type="data" placeholder="必填,请选择">
+										</div> -->
+
+
+										<div class="date date1 fl ipt-text" id="from">
+											<span class="title">使用日期:</span>
+											<input type="text" name="" value="" placeholder="必填,请选择"
+												id="datepicker" /><br>
+										</div>
+
+										<div class="tells ipt-text">
+											<span class="title">联系方式:</span>
+											<input type="text" placeholder="必填,请填写联系方式" />
+										</div>
+										<div class="says ipt-text">
+											<span class="title">给卖家留言:</span>
+											<input type="text" placeholder="选填,对本次交易的说明" />
+										</div>
+										<p style="margin-top: 30px;  margin-left: 35px;">
+											<input type="checkbox"
+												style="visibility:initial; margin-right: 6px; vertical-align: middle; margin-top: 2px;"
+												name="" id="">我已阅读并接受所有条款内容<a href="#"
+												style="margin-left: 10px;">查看条款内容</a>
+										</p>
+
+
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="pay-btn-box">
+							<div class="btn btn-default">
+								提交订单去支付&nbsp;<sapn>&nbsp;(&yen;160.0)</sapn>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="g-listbox-r g-listbox-r-max">
+					<div class="bgfff box_shadow">
+						<div class="sidebar">
+							<div id="J_ShopInfo" class="shop-info ">
+								<div class="shop-info-wrap">
+									<div class="shop-info-hd">
+										<div class="m_r_7">
+											<img src="../../img/place-order/xd-icon-01.png" />
+										</div>
+										店铺：
+										<span class="shop-name ellipsis">
+											飞马智游旅行社有限公司
+										</span>
+									</div>
+									<div class="shop-info-bd">
+										<div class="shop-logo-img">
+											<img src="../../img/place-order/xd-pic_right-01.jpg" />
+										</div>
+									</div>
+									<div class="shop-info-ft">
+										<div class="ellipsis goods-name">
+											喀纳斯门票成人票
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bgfff box_shadow">
+						<div class="goods-info-costlist c333">
+							<div class="">
+								<div class="list-group-item no-border">
+									<div><span class="f18">费用</span><span
+											class="cff5555 fr clear-both m_t_5">&yen;160.00</span></div>
+								</div>
+								<div class="list-group-item no-border">
+									<div><span class="f18">红包抵扣</span> <span
+											class="cff5555 fr clear-both m_t_5">-&yen;0.00</span></div>
+								</div>
+								<hr>
+								<div class="list-group-item no-border">
+									<div class=""><span class="f18">在线支付</span></div>
+									<div class="gray-box">
+										<div class="tr">
+											店铺合计：<span class="cff5555">&yen;160.00</span>
+										</div>
+										<div class="tr f14">
+											实付款：<span class="cff5555">&yen;<span class="f28">160.00</span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="">
+		<section>
+			<footer>
+				<div class="content-int">
+					<div class="Development short-footer-box tc">
+						<p><img src="../../img/public-bot-logo.png" alt=""></p>
+						<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com) 版权所有</span><span>新ICP备18001279号-1</span>
+						</p>
+						<p><span>新公安网安备
+								65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050
+							</span></p>
+					</div>
+				</div>
+			</footer>
+		</section>
+	</div>
+</body>
+<script src="../../js/jquery/jquery.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="static/js/moment-with-locales.js"></script> -->
+<!-- <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+<script src="../../js/jquery/jquery-1.4.2.min.js"></script>
+<script src="../../js/Scenic/jquery.datePicker-min.js"></script>
+<script type="text/javascript ">
+	//日期选择
+	$(document).ready(function(){
+			$(".datepicker").datePicker({
+				inline:true,
+				selectMultiple:false
+			});
+			$("#datepicker").datePicker({
+				clickInput:true
+			});
+			});
+		// $(function(){
+			// $(".public-sub li").on("mouseover",function(){
+			// 	var index = $(this).attr("data-index");
+			// 	$(".payment-method-box #item"+index+"").css({"display":"block"}).siblings().css({"display":"none"});
+			// 	console.log($(".payment-method-box #item"+index+""));
+			// 	$(this).addClass("active").siblings().removeClass("active");
+			// })
+			// $(".public-sub li").on("click",function(){
+			// 	var index = $(this).attr("data-index");
+			// 	$(".payment-method-box #item"+index+"").css({"display":"block"}).siblings().css({"display":"none"});
+			// 	$(this).addClass("active").siblings().removeClass("active");
+			// })
+			
+			
+			//取消掉所有选择的颜色
+			// function cancelChooseColor(clickId){
+			// 	var inputColor = $('#color-input-red');
+			// 	if($(clickId).prop("checked")==true){
+			// 		$("#color-input-red").next().css({"z-index":"100"});
+			// 	}else{
+			// 		$("#color-input-red").next().css({"z-index":""});
+			// 	}
+			// }
+			// $(document).on("click","#color-input-red",function(){
+			// 	cancelChooseColor("#color-input-red");
+			// })
+				
+			// })
+
+		
+	</script>
+
+</html>

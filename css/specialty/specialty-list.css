@@ -1,0 +1,262 @@
+body {
+	background: rgba(250, 250, 250);
+}
+
+
+/*商品列表*/
+.shop-list {
+	width: 100%;
+	padding: 15px 0;
+}
+
+.shop-goods {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 2px dashed rgba(250, 250, 250);
+}
+
+
+/*.shop-list .shop-goods:last-child{
+				border-bottom: none;
+			}*/
+
+.shop-goods-item {
+	/*width: 204px;*/
+	position: relative;
+	display: inline-block;
+	margin-left: 18px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid transparent;
+}
+
+.shop-goods-item:hover {
+	/*border: 1px solid #C0C2C4;*/
+}
+
+.goods-img-box {
+	position: relative;
+}
+
+.goods-block-box {
+	width: 100%;
+	line-height: 28px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	padding-left: 9px;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.goods-star-box {
+	width: 81px;
+	line-height: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-left: 3px;
+	background: #ff5555;
+	border-bottom-right-radius: 7px;
+}
+
+.goods-star {
+	display: inline-block;
+}
+
+.m-pagination .pagebox span,
+.m-pagination .pagebox a,
+.m-pagination .pagebox input {
+	display: inline-block;
+	font-size: 12px;
+}
+
+.m-pagination .pagebox {
+	padding: 27px 0 28px 0;
+	text-align: center;
+	line-height: 30px;
+	font-size: 0;
+}
+
+.m-pagination .pagebox a {
+	display: inline-block;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	margin-left: -1px;
+}
+
+.m-pagination .pagebox .prev,
+.m-pagination .pagebox .next {
+	width: 30px;
+}
+
+.m-pagination .pagebox .prev {
+	margin-right: 16px;
+}
+
+.m-pagination .pagebox .next {
+	margin-right: 15px;
+}
+
+.m-pagination .pagebox .disabled {
+	border: 1px solid #d5d5d5;
+	background: #fff;
+	color: #666;
+}
+
+.m-pagination .pagebox .pi._j_pageitem {
+	margin-right: 16px;
+	color: #666;
+	border: 1px solid #d5d5d5;
+}
+
+.m-pagination .pagebox .curr {
+	margin-right: 16px;
+	/*background: #FF4349;*/
+	border: 1px solid #008ada;
+	color: #008ada;
+	cursor: default;
+}
+
+.m-pagination .pagebox .input-txt,
+.m-pagination .pagebox .btn {
+	display: inline-block;
+	width: 46px;
+	height: 28px;
+	border: 1px solid #d8d8d8;
+	text-align: center;
+	line-height: 26px;
+	padding: 0;
+}
+
+.m-pagination .pagebox .input-txt {
+	margin: 0 6px;
+}
+
+.m-pagination .pagebox .btn {
+	width: 60px;
+	height: 30px;
+	vertical-align: initial;
+	border-radius: 0px;
+	color: #fff;
+	margin-left: 23px;
+	font-size: 14px;
+	background: #008ada;
+}
+
+.img-left {
+	/*width: 240px;
+				height: 170px;*/
+	width: 224px;
+	height: 170px;
+}
+
+/*列表页右侧广告*/
+.img-left-bottom {
+	width: 260px;
+	height: 218px;
+	margin-top: 31px;
+	cursor: pointer;
+}
+
+/*列表页右侧商品*/
+.g-listbox-r-child {
+	padding: 0 15px;
+	margin-top: 25px;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+.g-listbox-r-child:hover{
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.g-listbox-r-child .shop-message {
+	display: flex;
+	margin-top: 25px;
+	padding-left: 10px;
+}
+
+.g-listbox-r-child-p {
+	font-size: 14px;
+}
+
+.g-listbox-r-child-p .price {
+	font-size: 20px;
+	color: #ff6900;
+}
+
+.g-listbox-r-child-p2 {
+	font-size: 14px;
+	margin-left: 46px;
+	width: 76px;
+	height: 30px;
+	background: #ee5555;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+}
+
+.g-listbox-r-child-p2:hover {
+	background: #ff5555;
+}
+
+.g-listbox-r-child-biao {
+	padding: 0 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 224px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 13px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: left;
+}
+
+.g-listbox-r-child-head {
+	width: 40px;
+	height: 25px;
+	text-align: center;
+	background: red;
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.bg-yin {
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 25px;
+	margin-top: ;
+}
+
+/*列表页右侧商品类块标题*/
+.m-bbox {
+	width: 100%;
+	padding-left: 13px;
+	padding-top: 26px;
+	border-bottom: 2px solid #ddd;
+}
+
+.m-bbox-tle {
+	display: inline-block;
+	/*width: 100%;*/
+	font-size: 20px;
+	color: #008ada;
+	font-weight: 500;
+	border-bottom: 2px solid #008ada;
+	/*height: 35px;
+    			line-height: 35px;*/
+	margin-bottom: -2px;
+	position: relative;
+}
+

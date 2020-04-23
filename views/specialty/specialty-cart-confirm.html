@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css"/>
+		<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../../css/common/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/Scenic_spot.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/index/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/specialty/specialty-list.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/pay-order/cart-confirm.css"/>
+		<style type="text/css">
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<section class="nav-header">
+				<header class="bgfff">
+					<div class="content-width">
+						<div class="inline-block">
+							<h1>
+								<a href="/"><img id="shouyouxjLogo" src="../../img/place-order/xd-pic-slogo.png"/></a>
+							</h1>
+						</div>
+						<div class="cart_step cart_step_1">
+							<div></div>
+							<ul>
+								<li >选择商品</li>
+								<li class="active">填写核对订单信息</li>
+								<li>成功提交订单</li>
+							</ul>
+						</div>
+						
+						<!--<div class="fr" style="display: none;">
+							<div class="">
+								<img src="../../img/place-order/xd-lc_pic_2.png"/>
+							</div>
+							<div class="tc ">
+								<span class="">选择商品</span>
+								<span>填写核对订单信息</span>
+								<span>成功提交订单</span>
+							</div>
+						</div>-->
+					</div>
+				</header>
+			</section>
+			<div class="state-box">
+				<div class="state-bar content-width">
+					支付订单
+				</div>
+			</div>
+		</div>
+		
+		<div id="" >  <!--style="display: none;"-->
+			<div class="content-int">
+				<div class="content-width" style="display: flex;">
+					<!--以下为左右-->
+					<div class="g-listbox-l m-pdlist bgfff">
+						<div class="bgfff">
+							<div class="cart_bt">
+								确认收货地址
+							</div>
+							<div class="cart_addr" id="showAddress" >
+								<ul>
+									<li>
+										<label><input type="radio" name="area" value="" checked="checked">北京市市辖区东城区一二三四一二三四  17600608153</label>
+										<div class="fr">
+											<a href="#" id="setDefault_165a64384585441ab9df2569721ee1e6">设置为默认收货地址</a>
+											<a href="#" id="updateAddress_165a64384585441ab9df2569721ee1e6">修改本地址</a>
+										</div>
+										<input type="hidden" id="" name="" value="110000">
+										<input type="hidden" id="" name="" value="110100">
+										<input type="hidden" id="" value="110101">
+										<input type="hidden" name="" id="" value="17600608153">
+									</li>
+									
+								</ul>
+								<ul class="y_otheraddress">
+									<li>
+										<label><input type="radio" name="area" value="afb397c31a3748fa8c7ae49b8e8f3a2b">一二三级  江苏省南京市玄武区  江苏的姑苏蓝氏  17600608153</label>
+										<div class="fr">
+											<a href="#" id="setDefault_afb397c31a3748fa8c7ae49b8e8f3a2b">设置为默认收货地址</a>
+											<a href="#" id="updateAddress_afb397c31a3748fa8c7ae49b8e8f3a2b">修改本地址</a>
+										</div>
+										<input type="hidden" id="province_afb397c31a3748fa8c7ae49b8e8f3a2b" name="province_afb397c31a3748fa8c7ae49b8e8f3a2b" value="320000">
+										<input type="hidden" id="city_afb397c31a3748fa8c7ae49b8e8f3a2b" name="city_afb397c31a3748fa8c7ae49b8e8f3a2b" value="320100">
+										<input type="hidden" id="region_afb397c31a3748fa8c7ae49b8e8f3a2b" value="320102">
+										<input type="hidden" name="mobile_afb397c31a3748fa8c7ae49b8e8f3a2b" id="mobile_afb397c31a3748fa8c7ae49b8e8f3a2b" value="17600608153">
+									</li>
+									<li>
+										<label><input type="radio" name="area" value="ca0f919467f4482fb80c3c20162f714b">马小云呀  新疆维吾尔自治区乌鲁木齐市乌鲁木齐县 永丰乡 12345678  17600608153</label>
+										<div class="fr">
+											<a href="#" id="setDefault_ca0f919467f4482fb80c3c20162f714b">设置为默认收货地址</a>
+											<a href="#" id="updateAddress_ca0f919467f4482fb80c3c20162f714b">修改本地址</a>
+										</div>
+										<input type="hidden" id="province_ca0f919467f4482fb80c3c20162f714b" name="province_ca0f919467f4482fb80c3c20162f714b" value="650000">
+										<input type="hidden" id="city_ca0f919467f4482fb80c3c20162f714b" name="city_ca0f919467f4482fb80c3c20162f714b" value="650100">
+										<input type="hidden" id="region_ca0f919467f4482fb80c3c20162f714b" value="650121">
+										<input type="hidden" name="mobile_ca0f919467f4482fb80c3c20162f714b" id="mobile_ca0f919467f4482fb80c3c20162f714b" value="17600608153">
+									</li>
+									<li>
+										<label><input type="radio" name="area" value="f047fcf5172442f5bdaa0b60a411303a">马小云  北京市市辖区海淀区 中关村街道办事处 中科软商务楼  17600608153</label>
+										<div class="fr">
+											<a href="#" id="setDefault_f047fcf5172442f5bdaa0b60a411303a">设置为默认收货地址</a>
+											<a href="#" id="updateAddress_f047fcf5172442f5bdaa0b60a411303a">修改本地址</a>
+										</div>
+										<input type="hidden" id="province_f047fcf5172442f5bdaa0b60a411303a" name="province_f047fcf5172442f5bdaa0b60a411303a" value="110000">
+										<input type="hidden" id="city_f047fcf5172442f5bdaa0b60a411303a" name="city_f047fcf5172442f5bdaa0b60a411303a" value="110100">
+										<input type="hidden" id="region_f047fcf5172442f5bdaa0b60a411303a" value="110108">
+										<input type="hidden" name="mobile_f047fcf5172442f5bdaa0b60a411303a" id="mobile_f047fcf5172442f5bdaa0b60a411303a" value="17600608153">
+									</li>
+								</ul>
+								<button type="button" class="btn btn-custom y_newaddressbtn" id="useNewAddress">
+									  	使用新地址
+									  </button>
+								<button type="button" class="btn btn-link y_otheraddressbtn">
+									  	使用其他地址
+									 </button>
+							</div>
+							
+							
+							<div class="cart_bt">
+								确认订单信息
+							</div>
+							<div class="cart-table-responsive">
+								<div class="table-responsive">
+									<div class="cart-table-tit" style="display: none;">
+										<div class="thead">
+											<ul class="tr">
+												<li width="47%">商品信息</li>
+												<li width="17%">单价（元）</li>
+												<li width="20%">数量</li>
+												<li>金额（元）</li>
+											</ul>
+										</div>
+									</div>
+									<table class="cart-table-tit">
+										<thead>
+											<tr>
+												<th width="47%">商品信息</th>
+												<th width="17%">单价（元）</th>
+												<th width="20%">数量</th>
+												<th>金额（元）</th>
+											</tr>
+										</thead>
+									</table>
+									<div id="" name="">
+										<input type="hidden" id="storeUuid" value="">
+										<input type="hidden" id="" value="">
+										<span id="contrallnum">
+											<input type="hidden" name="" value="">
+											<span class="select-box clearfix f-fl" id="contrallnum"></span>		
+										</span>
+										<div class="cart-table-box">
+											<table class="cart-table y_checktable">
+												<tbody class="r_tz">
+													<!-- 零售商品 -->
+													<tr >
+														<td width="47%" class="y_firsttd">
+															<div class="pic">
+																<a href="/front/productDetail?skuNo=0000369759" target="_blank">
+																</a>
+																<a href="/front/productDetail?skuNo=0000369759" target="_blank">
+																	<img src="../../img/list/lb-pic-left-01-202x150.jpg" alt="">
+																</a>
+															</div>
+															<div class="name f12">
+																<a href="/front/productDetail?skuNo=0000369759" target="_blank">小隐水果酒  （330ML  黑枸杞味、玫瑰味、青梅味、青苹果味、沙棘味）</a>
+																<span class="sx">
+																	<span class="y_pdsta">商品重量：其他</span>
+																</span>
+															</div>
+															<!-- 循环赠品商品 -->
+										
+															<!-- 循环赠品优惠券 -->
+														</td>
+														<td width="17%" class="price">
+															<span class="c333">¥318.00 </span>
+															<input type="hidden" name="productCartDetailUuid_0000369759" value="">
+															<input type="hidden" name="productNowPrice_0000369759" value="620.1">
+															<input type="hidden" id="productBasePrice_1" name="productBasePrice" value="318.0">
+															<input type="hidden" name="productMarketPrice_0000369759" value="398.0">
+															<input type="hidden" id="productUuid" name="productUuid" value="">
+															<input type="hidden" id="nowbuynum1" name="productBuyNum" value="2">
+															<input type="hidden" name="detailNowPromotionUuid" value="">
+															<input type="hidden" name="productType" value="01">
+														</td>
+														<td width="20%">
+															1
+														</td>
+														<td class="y_lasttd">
+															<span id="money" class=" f_size14">¥318.10 </span>
+															<input type="hidden" name="productPrice_0000369759" value="620.1">
+														</td>
+													</tr>
+													<tr style="display: none;">
+														<td colspan="2" rowspan="2" class="text_l td_line">
+															<dl class="y_message">
+																<dt class="padd-top">给卖家留言：</dt>
+																<dd>
+																	<input type="text" name="storeNote1c24daaa0beb499282d19a3df3c2c1ac" maxlength="200" class="form-control" placeholder="选填：对本次交易的说明">
+																</dd>
+															</dl>
+														</td>
+														<td colspan="3" align="left" class="cart_ztBox">
+															<input type="hidden" id="offlineCouponReduceMoney_1c24daaa0beb499282d19a3df3c2c1ac" name="offlineCouponReduceMoney_1c24daaa0beb499282d19a3df3c2c1ac" value="15.9">
+															<span class="y_mb10">
+																		红包抵扣：
+																<b class="item-price-special" id="redmoney">
+																	-￥15.90
+																</b>
+															</span>
+														</td>
+													</tr>
+													<tr class="text_l" style="display: none;">
+														<td colspan="3" align="left" class="cart_ztBox">
+															<input type="hidden" name="chooseCod_1c24daaa0beb499282d19a3df3c2c1ac" id="chooseCod_1c24daaa0beb499282d19a3df3c2c1ac" value="false">
+															<div class="y_mb10">支付方式：
+																<span class="f_color2">在线支付</span>
+																<input type="hidden" name="payType_1c24daaa0beb499282d19a3df3c2c1ac" value="1">
+															</div>
+															<span class="fr">
+																运费：
+																<b class="item-price-special">
+																	<span id="affixShow_1c24daaa0beb499282d19a3df3c2c1ac">￥10.00</span>
+																	<input type="hidden" id="affix_1c24daaa0beb499282d19a3df3c2c1ac" name="affix_1c24daaa0beb499282d19a3df3c2c1ac" value="10.0">
+																</b>
+															</span>
+															<div style="position:relative">
+																配送方式：
+																<input type="radio" name="shipType_1c24daaa0beb499282d19a3df3c2c1ac" id="express_1c24daaa0beb499282d19a3df3c2c1ac" value="1" checked=""> 快递&nbsp;&nbsp;
+															</div>
+														</td>
+													</tr>
+													<tr style="display: none;">
+														<td colspan="5" align="right">
+										
+															店铺合计：<b class="fr item-price-special" id="cartPayMoneyShow_1c24daaa0beb499282d19a3df3c2c1ac">¥630.10</b>
+															<input type="hidden" id="cartPayMoney_1c24daaa0beb499282d19a3df3c2c1ac" name="cartPayMoney_1c24daaa0beb499282d19a3df3c2c1ac" value="620.1">
+															<input type="hidden" id="cartTotalMoney_1c24daaa0beb499282d19a3df3c2c1ac" name="cartTotalMoney_1c24daaa0beb499282d19a3df3c2c1ac" value="636.0">
+															<input type="hidden" name="nowCouponDetailUuid_1c24daaa0beb499282d19a3df3c2c1ac" value="">
+															<input type="hidden" name="nowPromotionUuid_1c24daaa0beb499282d19a3df3c2c1ac" value="">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fill-information">
+								<div class="">
+									<ul>
+										<li >
+											<span class="inline-block f12">给卖家留言： </span>
+											<!--<label for="basic-url">Your vanity URL</label>-->
+											<div class="input-group inline-block">
+											  <input type="text" class="form-control" placeholder="选填：对本次交易的说明" aria-describedby="basic-addon1">
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="pay-btn-box">
+								<div class="btn btn-default">
+									提交订单去支付&nbsp;<sapn>&nbsp;(&yen;318.0)</sapn>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					<div class="g-listbox-r g-listbox-r-max">
+						<div class="bgfff box_shadow">
+							<div class="sidebar">
+								<div id="J_ShopInfo" class="shop-info ">
+									<div class="shop-info-wrap">
+										<div class="shop-info-hd">
+											<div class="m_r_7">
+												<img src="../../img/place-order/xd-icon-01.png"/>
+											</div>
+											店铺：
+											<span class="shop-name ellipsis">
+												上隐无野商贸有限公司
+											</span>
+										</div>
+										<div class="shop-info-bd">
+											<div class="shop-logo-img">
+												<img src="../../img/place-order/xd-pic_right-01.jpg"/>
+											</div>
+										</div>
+										<div class="shop-info-ft">
+											<div class="ellipsis goods-name">
+												小隐水果酒  （330ML  黑枸杞味、玫瑰味、青梅味、青苹果味、沙棘味）
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bgfff box_shadow">
+							<div class="goods-info-costlist c333">
+								<div class="">
+									<div class="list-group-item no-border">
+										<div ><span class="f18">费用</span><span class="cff5555 fr clear-both m_t_5">&yen;168.00</span></div>
+									</div>
+									<div class="list-group-item no-border">
+										<div><span class="f18">红包抵扣</span> <span class="cff5555 fr clear-both m_t_5">-&yen;0.00</span></div>
+									</div>
+									<div class="list-group-item border-line">
+										<div><span class="f18">配送方式</span> <div class="inline-block m_l_9 checkbox">
+											
+											<input type="radio" name="1" checked>&nbsp;快递
+										</div>
+										<span class="fr clear-both m_t_5">运费：<span class="cff5555">-&yen;0.00</span></span></div>
+									</div>
+									<div class="list-group-item no-border">
+										<div class=""><span class="f18">在线支付</span></div>
+										<div class="gray-box">
+											<div class="tr">
+												店铺合计：<span class="cff5555">&yen;336.00</span>
+											</div>
+											<div class="tr f14">
+												实付款：<span class="cff5555">&yen;<span class="f28">336.00</span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+						
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="" style="display: none;">
+			<section>
+				<footer>
+					<div class="content-int">
+						<div class="Development short-footer-box tc">
+							<p><img src="../../img/public-bot-logo.png" alt=""></p>
+							<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com)    版权所有</span><span>新ICP备18001279号-1</span></p>
+							<p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050 </span></p>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+		
+		<footer style="display: block;">
+	    	<div class="contact">
+	    		<ul class="Hotline">
+	    			<li class="Hotline_line">
+	    				<img src="../../img/public-end-icon-phone.png" alt="">
+	    				<div>
+	    					<p>服务热线</p>
+	    					<p>400-123-456</p>
+	    				</div>
+	    			</li>
+	    			<li class="Hotline_line">
+	    				<img src="../../img/public-end-icon-mail.png" alt="">
+	    				<p style="line-height: 2.9;">意见反馈</p>
+	    			</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">手游新疆旅游网</li>
+	    			<li>覆盖全疆100多个县</li>
+	    			<li>10,000,000</li>
+	    			<li>8030家酒店</li>
+	    			<li>1000家新疆特色餐饮</li>
+	    			<li>手游新疆APP带您领略新疆风貌</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">关于我们</li>
+	    			<li>关于手游新疆</li>
+	    			<li>联系我们</li>
+	    			<li>隐私政策</li>
+	    			<li>商标声明</li>
+	    			<li>新疆非遗入住协议</li>
+	    			<li>商城平台服务协议</li>
+	    			<li>网站地图</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">快速导航</li>
+	    			<li>门票购买</li>
+	    			<li>线路选择</li>
+	    			<li>旅游特价</li>
+	    			<li>租车服务</li>
+	    			<li>旅游问答</li>
+	    			<li>订火车票</li>
+	    			<li>订购机票</li>
+	    			<li>旅游保险</li>
+	    			<li>旅游资讯</li>
+	    			<li>APP下载</li>
+	    		</ul>
+	    		<div class="QR_code">
+	    			<p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+	    			<img src="../../img/public-end-ewm-1.jpg" alt="">
+	    			<p class="QR_code_content">下载有惊喜哦</p>
+	    		</div>
+	    		<div class="QR_code">
+	    			<p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+	    			<img src="../../img/public-end-ewm-2.jpg" alt="">
+	    			<p class="QR_code_content">快来关注我吧</p>
+	    		</div>
+	    
+	    	</div>
+	    	<div class="link">
+	    		<p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span></p>
+	    		<p>友情链接:<span>百度网旅游</span>
+	    			<span>途牛网旅游</span>
+	    			<span>人民网旅游</span>
+	    			<span>奇艺旅游</span>
+	    		</p>
+	    	</div>
+	    	<div class="website">
+	    		<div class="love">
+	    			<p>新疆的旅游路上,我们一直都在</p>
+	    			<p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png" alt=""><img src="../../img/public-end_icon-3.png" alt=""></p>
+	    		</div>
+	    		<div class="Development">
+	    			<p><img src="../../img/public-bot-logo.png" alt=""></p>
+	    			<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com)    版权所有</span><span>新ICP备18001279号-1</span></p>
+	    			<p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050 </span></p>
+	    		</div>
+	    	</div>
+	    
+	    </footer>
+		
+	</body>
+	<script src="../../js/jquery/jquery.js"></script>
+	<script src="../../js/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/js/moment-with-locales.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript ">
+		$(function(){
+			$(".public-sub li").on("mouseover",function(){
+				var index = $(this).attr("data-index");
+				$(".payment-method-box #item"+index+"").css({"display":"block"}).siblings().css({"display":"none"});
+				console.log($(".payment-method-box #item"+index+""));
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+			$(".public-sub li").on("click",function(){
+				var index = $(this).attr("data-index");
+				$(".payment-method-box #item"+index+"").css({"display":"block"}).siblings().css({"display":"none"});
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+			
+			
+			//取消掉所有选择的颜色
+			function cancelChooseColor(clickId){
+				var inputColor = $('#color-input-red');
+				if($(clickId).prop("checked")==true){
+					$("#color-input-red").next().css({"z-index":"100"});
+				}else{
+					$("#color-input-red").next().css({"z-index":""});
+				}
+			}
+			$(document).on("click","#color-input-red",function(){
+				cancelChooseColor("#color-input-red");
+			})
+				
+			})
+	</script> 
+	
+</html>

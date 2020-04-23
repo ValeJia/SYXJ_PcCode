@@ -1,0 +1,234 @@
+    
+ .content_list_periphery{
+    width: 1200px;
+}
+.content_list_periphery_title{
+   padding:0 30px;
+   /* height: 57px; */
+   background: #fff;
+   border-bottom: solid #f5f5f5 3px;
+   color: #008ada;
+   font-size: 20px;
+   /* line-height: 2; */
+
+}
+.adress{
+    padding: 20px 0px;
+}
+.adress span{
+   color: #333;
+   padding: 0 15px;
+   cursor: pointer;
+   font-size: 12px;
+}
+.adress span:first-of-type~span{
+   border-left: solid 1px #333;
+}
+.content_list_periphery_title a{
+    color: #333333;
+    font-size: 12px;
+    float: right;
+    margin-top: 15px;
+
+}
+.content_list_periphery_list,.content_list_periphery_Customized_list{
+    margin-bottom: 30px;
+    padding: 0 30px;
+    height: 271px;
+    background: #fff;
+}
+.content_list_periphery_list figure,.content_list_periphery_Customized_list figure{
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.zhezhao {
+    padding: 0 10px;
+    margin-left: 5px;
+    width: 250px;
+   position: absolute;
+   color: #fff;
+   font-size: 12px;
+   bottom: 44px;
+   height: 41px;
+   background: rgb(0,0,0,0.4);
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   overflow: hidden;
+}
+.content_list_periphery_list figure img,.content_list_periphery_Customized_list figure img{
+    width: 270px;
+    height: 180px;
+    margin: 28px 10px 20px 5px;
+}
+.content_list_periphery_list figure .Scenic_price,.content_list_periphery_Customized_list  figure .Scenic_price{
+    text-align: left;
+    padding-left: 10px;
+}
+.content_list_periphery_list figure .Scenic_price .rob,.content_list_periphery_Customized_list  figure .Scenic_price .rob{
+    font-size: 12px;
+    margin-left: 139px;
+    color: #999999;
+}
+.content_list_periphery_Popular{
+    /* height: 271px; */
+    background: #fff;
+    
+   }
+   .content_list_periphery_Popular_list{
+       width: 1200px;
+       height: 291px;
+       display: flex;
+}
+.content_list_periphery_Popular_list figure:first-child{
+    position: relative;
+    margin-left: 30px;
+}
+.content_list_periphery_Popular_list figure:first-child~figure{
+    position: relative;
+    margin-left: 10px;
+}
+.hotzhezhao{
+    width: 341px;
+    padding: 0 10px;
+    /* margin-left: 5px; */
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    bottom: 62px;
+    left: 5px;
+    height: 30px;
+    line-height: 2.5;
+    background: rgb(0,0,0,0.4);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.bottomzhezhao{
+    width: 250px;
+    padding: 0 10px;
+    margin-left: 5px;
+    position: absolute;
+   color: #fff;
+   font-size: 12px;
+   bottom: 44px;
+   height: 41px;
+   line-height: 2.5;
+   background: rgb(0,0,0,0.4);
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 1;
+   overflow: hidden;
+}
+.content_list_periphery_Popular_list figure img{
+    width: 361px;
+    height: 200px;
+    margin: 28px 10px 20px 5px;
+}
+/* 顶部图标 */
+.content_list_periphery_Popular_list figure .hotTop{
+   position: absolute;
+    top: -4px;
+    left: 0;
+    width: 90px;
+    height: 56px;
+}
+
+.content_list_periphery_Popular_list figure .Scenic_price{
+   
+    text-align: left;
+    padding-left: 10px;
+}
+.content_list_periphery_Popular_list figure .Scenic_price .rob{
+    font-size: 12px;
+    float: right;
+    margin-right: 10px;
+    color: #999999;
+}
+.content_list_periphery_Trip_list{
+    width: 1200px;
+    height: 440px;
+    background: #fff;
+    display: flex;
+}
+.content_list_periphery_Trip_list_big{
+    position: relative;
+    padding: 30px 20px 20px 30px;
+}
+.content_list_periphery_Trip_list_big_zhezhao{
+    bottom: 30px;
+    left: 25px;
+   width: 540px;
+   padding: 0 10px;
+   margin-left: 5px;
+   position: absolute;
+   color: #fff;
+   font-size: 12px;
+   height: 46px;
+   /* line-height: 2.5; */
+   background: rgb(0,0,0,0.4);
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+
+}
+.content_list_periphery_Trip_list_zhezhao{
+    width: 250px;
+   bottom: 0px;
+    left: 0px;
+   padding: 0 10px;
+   position: absolute;
+   color: #fff;
+   font-size: 12px;
+   height: 46px;
+ 
+   background: rgb(0,0,0,0.4);
+   display: -webkit-box;
+   -webkit-box-orient: vertical; 
+}
+.content_list_periphery_Trip_list_big img{
+    width: 560px;
+    height: 380px;
+}
+.content_list_periphery_Trip_list_big_shuoming,.content_list_periphery_Trip_list_shuoming{
+    display: flex;
+    justify-content: space-between;
+}
+.content_list_periphery_Trip_list_big_price,.content_list_periphery_Trip_list_shuoming{
+    color: #fff;
+    font-size: 12px;
+}
+.content_list_periphery_Trip_list_big_price span,
+.content_list_periphery_Trip_list_big_num,
+.content_list_periphery_Trip_list_shuoming{
+    color: #cccccc;
+    font-size: 12px;
+}
+.content_list_periphery_Trip_list_big_price span b,.content_list_periphery_Trip_list_shuoming span b{
+    font-weight: 550;
+    color: #ffae00;
+
+}
+.content_list_periphery_Trip_list_little{
+   
+    padding: 30px 0;
+    width: 560px;
+    /* height: 440px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.content_list_periphery_Trip_list_little_pic{
+    position: relative;
+    /* float: left; */
+    width: 270px;
+    height: 180px;
+}
+.content_list_periphery_Trip_list_little_pic:nth-child(2)~div{
+    margin-top: 10px;
+}
+.content_list_periphery_Trip_list_little_pic img{
+   width: 270px;
+   height: 180px;
+}

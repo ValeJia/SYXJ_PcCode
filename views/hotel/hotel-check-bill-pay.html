@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/Scenic_spot.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/index/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/specialty/specialty-list.css"/>
+		<style type="text/css">
+			#shouyouxjLogo{
+				margin-bottom: 10px;
+			}
+			.cart_step {
+			    float: right;
+			    width: 480px;
+			    margin: 20px auto 20px;
+			}
+			.cart_step div {
+			    width: 100%;
+			    height: 24px;
+			    background: url(../../img/place-order/xd-lc_pic_2.png) no-repeat;
+			}
+			.cart_step_1 div {
+			    background-position: 0 0;
+			}
+			.cart_step ul {
+			    width: 100%;
+			}
+			.cart_step li {
+			    width: 33.3%;
+			    float: left;
+			    text-align: center;
+			    padding-top: 5px;
+			    color: #666;
+			    font-weight: bold;
+			}
+			.cart_step li.active {
+				color: #666;
+			}
+			.state-box{
+				background: #6284a3;
+				width: 100%;
+				height: 46px;
+			}
+			.state-bar{
+				font-size: 20px;
+				color: #fff;
+				line-height: 46px;
+			}
+			
+			
+			.menu-details-box{
+				background: #fff7ee;
+				height: 84px;
+				line-height: 84px;
+				color: #999;
+				padding: 0 60px;
+				margin-top: 30px;
+				border: 1px dashed #ffbd9c;
+			}
+			
+			.public-tit {
+				margin-top: 30px;
+				padding-left: 30px;
+			    position: relative;
+			    height: 40px;
+			    /*padding-bottom: 8px;
+			    border-bottom: 2px solid #ddd;*/
+			    z-index: 2;
+			}
+			.public-sub {
+			    position: absolute;
+			    /*left: 242px;*/
+			    bottom: -2px;
+			    /*height: 30px;*/
+			    /*line-height: 24px;*/
+			    color: #666;
+			}
+			.public-sub li {
+			    position: relative;
+			    display: inline-block;
+			    float: left;
+			    height: 40px;
+			    margin-right: 50px;
+			    padding: 0 3px;
+			    font-size: 20px;
+			    cursor: pointer;
+			    /*background: #fff;*/
+			}
+			
+			
+			.public-sub li.active {
+			    border-bottom: 2px solid #008ada;
+			}
+			
+			
+			.public-sub .syicon-arrow{
+				display: none;
+			}
+			.public-sub li.active .syicon-arrow {
+			    display: block;
+			}
+			.public-sub li:hover, .public-sub li.active {
+			    color: #008ada;
+			}
+			
+			.payment-method-box{
+				margin-bottom: 147px;
+			}
+			.add-bank-card-btn{
+				color: #008ada;
+				width: 131px;
+				height: 42px;
+				border-color: #e5e5e5;
+				font-size: 12px;
+				line-height: 42px;
+				padding: 0;
+			}
+			.add-bank-card-btn:hover{
+				color: #008ada;
+				border-color: #008ada;
+				background: #fff;
+			}
+			
+			.UnionPay-box,.wx-box,.zfb-box{
+				display: none;
+			}
+			
+			.UnionPay-box{
+				margin-left: 70px;
+			}
+			.wx-box{
+				margin-left: 180px;
+			}
+			.zfb-box{
+				margin-left: 330px;
+			}
+			
+			.code-box{
+				width: 300px;
+				border: 1px solid #ddd;
+			}
+			.code-img-box{
+				padding:  19px 19px 18px;
+			}
+			.code-message{
+				display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+				display: -moz-box; /* Firefox 17- */  
+				display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+				display: -moz-flex; /* Firefox 18+ */  
+				display: -ms-flexbox; /* IE 10 */
+				display: flex;
+    			justify-content: center;
+				background: #ff7676;
+			}
+			.code-message .code-message-img{
+				margin-top: 9px;
+			}
+			.code-message .code-message-text{
+				margin-top: 9px;
+    			margin-left: 10px;
+    			margin-bottom: 9px;
+			}
+			
+			.short-footer-box{
+				background: #38424C;
+				height: 155px;
+			}
+			.Development.short-footer-box {
+			    color: #878b90;
+			    font-size: 12px;
+			}
+			.Development.short-footer-box p {
+			    padding-top: 18px;
+			    margin: 0;
+			}
+			.Development.short-footer-box p:first-child {
+			    padding-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<section class="nav-header">
+				<header class="bgfff">
+					<div class="content-width">
+						<div class="inline-block">
+							<h1>
+								<a href="/"><img id="shouyouxjLogo" src="../../img/place-order/xd-pic-slogo.png"/></a>
+							</h1>
+						</div>
+						<div class="cart_step cart_step_1">
+							<div></div>
+							<ul>
+								<li >选择商品</li>
+								<li class="active">填写核对订单信息</li>
+								<li>成功提交订单</li>
+							</ul>
+						</div>
+						
+						<!--<div class="fr" style="display: none;">
+							<div class="">
+								<img src="../../img/place-order/xd-lc_pic_2.png"/>
+							</div>
+							<div class="tc ">
+								<span class="">选择商品</span>
+								<span>填写核对订单信息</span>
+								<span>成功提交订单</span>
+							</div>
+						</div>-->
+					</div>
+				</header>
+			</section>
+			<div class="state-box">
+				<div class="state-bar content-width">
+					支付订单
+				</div>
+			</div>
+		</div>
+		
+		<div id="" >  <!--style="display: none;"-->
+			<div class="content-int">
+				<div class="content-width bgfff" style="min-height: 585px;">
+					<!--以下为主体-->
+					<div class="g-box content-width" style="display: flex;">
+						<div class="content-width-small " >
+							<div class="menu-details-box">
+								<div class="flex">
+									<div class="flex-1">
+										<span class="c333 ">订单金额:</span>
+										<div class="inline-block m_l_18 f14 cff5555">
+											<span class="fl4">&yen;</span><span class="f28">336.0</span>
+										</div>
+									</div>
+									<div class="flex-1">
+										<span >支付单号:</span>
+										<div class="inline-block c333">
+											<span class=" ">ex33600000000</span>
+										</div>
+									</div>
+									<div class="flex-1">
+										<span >订单支付时间:</span>
+										<div class="inline-block c333">
+											<span class="cff5555">59分21秒内</span>完成支付,否则订单会自动<span class="cff5555 ">取消</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="">
+								<div class="m-bbox public-tit">
+									<ul class="JS_publicTab public-sub">
+		        			        	<li class="active" data-index="1">
+							        		银行卡支付<span class="syicon syicon-arrow"></span>
+							        	</li>
+							        	<li class="" data-index="2">
+							        		银联支付<span class="syicon syicon-arrow"></span>
+							        	</li>
+							        	<li data-index="3">
+							        		微信支付<span class="syicon syicon-arrow"></span>
+							        	</li>
+							        	<li data-index="4">
+							        		支付宝支付<span class="syicon syicon-arrow"></span>
+							        	</li>
+					        		</ul>
+									<!--<div class="m-bbox-tle">
+										精选特产
+										<span class="syicon syicon-arrow"></span>
+									</div>-->
+								</div>
+							</div>
+							<div class="m_t_45 p_l_30 payment-method-box">
+								<div id="item1" class="bank-card-box">
+									<img src="../../img/zf-yhk-01.jpg"/>
+									<div class="m_t_25">
+										<div class="btn btn-default add-bank-card-btn">
+											添加新卡支付
+										</div>
+									</div>
+								</div>
+								<div id="item2" class="UnionPay-box">
+									<img src="../../img/zf-yhk-01.jpg"/>
+									<div class="m_t_25">
+										<div class="btn btn-default add-bank-card-btn">
+											添加新卡支付
+										</div>
+									</div>
+								</div>
+								<div id="item3" class="wx-box">
+									<p>距离二维码过期还剩<span class="cff5555">54</span>秒,过期后请刷新页面重新获取二维码。</p>
+									<div class="code-box">
+										<div class="code-img-box">
+											<img src="../../img/zf-ewm-01.jpg"/>
+										</div>
+										<div class="code-message flex">
+											<div class="inline-block code-message-img">
+												<img src="../../img/zf-sys-01.png"/>
+											</div>
+											<div class="code-message-text">
+												<p>请使用微信扫一扫</p>
+												<p>扫描二维码支付</p>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div id="item4" class="zfb-box">
+									<p>距离二维码过期还剩<span class="cff5555">54</span>秒,过期后请刷新页面重新获取二维码。</p>
+									<div class="code-box">
+										<div class="code-img-box">
+											<img src="../../img/zf-ewm-01.jpg"/>
+										</div>
+										<div class="code-message flex">
+											<div class="inline-block code-message-img">
+												<img src="../../img/zf-sys-01.png"/>
+											</div>
+											<div class="code-message-text">
+												<p>请使用支付宝扫一扫</p>
+												<p>扫描二维码支付</p>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="" style="display: none;">
+			<section>
+				<footer>
+					<div class="content-int">
+						<div class="Development short-footer-box tc">
+							<p><img src="../../img/public-bot-logo.png" alt=""></p>
+							<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com)    版权所有</span><span>新ICP备18001279号-1</span></p>
+							<p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050 </span></p>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+		
+		<footer style="display: block;">
+	    	<div class="contact">
+	    		<ul class="Hotline">
+	    			<li class="Hotline_line">
+	    				<img src="../../img/public-end-icon-phone.png" alt="">
+	    				<div>
+	    					<p>服务热线</p>
+	    					<p>400-123-456</p>
+	    				</div>
+	    			</li>
+	    			<li class="Hotline_line">
+	    				<img src="../../img/public-end-icon-mail.png" alt="">
+	    				<p style="line-height: 2.9;">意见反馈</p>
+	    			</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">手游新疆旅游网</li>
+	    			<li>覆盖全疆100多个县</li>
+	    			<li>10,000,000</li>
+	    			<li>8030家酒店</li>
+	    			<li>1000家新疆特色餐饮</li>
+	    			<li>手游新疆APP带您领略新疆风貌</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">关于我们</li>
+	    			<li>关于手游新疆</li>
+	    			<li>联系我们</li>
+	    			<li>隐私政策</li>
+	    			<li>商标声明</li>
+	    			<li>新疆非遗入住协议</li>
+	    			<li>商城平台服务协议</li>
+	    			<li>网站地图</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">快速导航</li>
+	    			<li>门票购买</li>
+	    			<li>线路选择</li>
+	    			<li>旅游特价</li>
+	    			<li>租车服务</li>
+	    			<li>旅游问答</li>
+	    			<li>订火车票</li>
+	    			<li>订购机票</li>
+	    			<li>旅游保险</li>
+	    			<li>旅游资讯</li>
+	    			<li>APP下载</li>
+	    		</ul>
+	    		<div class="QR_code">
+	    			<p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+	    			<img src="../../img/public-end-ewm-1.jpg" alt="">
+	    			<p class="QR_code_content">下载有惊喜哦</p>
+	    		</div>
+	    		<div class="QR_code">
+	    			<p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+	    			<img src="../../img/public-end-ewm-2.jpg" alt="">
+	    			<p class="QR_code_content">快来关注我吧</p>
+	    		</div>
+	    
+	    	</div>
+	    	<div class="link">
+	    		<p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span></p>
+	    		<p>友情链接:<span>百度网旅游</span>
+	    			<span>途牛网旅游</span>
+	    			<span>人民网旅游</span>
+	    			<span>奇艺旅游</span>
+	    		</p>
+	    	</div>
+	    	<div class="website">
+	    		<div class="love">
+	    			<p>新疆的旅游路上,我们一直都在</p>
+	    			<p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png" alt=""><img src="../../img/public-end_icon-3.png" alt=""></p>
+	    		</div>
+	    		<div class="Development">
+	    			<p><img src="../../img/public-bot-logo.png" alt=""></p>
+	    			<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com)    版权所有</span><span>新ICP备18001279号-1</span></p>
+	    			<p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050 </span></p>
+	    		</div>
+	    	</div>
+	    
+	    </footer>
+		
+	</body>
+	<script src="../../js/jquery/jquery.js"></script>
+	<script src="../../js/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript ">
+			$(function(){
+				$(".public-sub li").on("mouseover",function(){
+					var index = $(this).attr("data-index");
+					$(".payment-method-box #item"+index+"").css({"display":"block"}).siblings().css({"display":"none"});
+					console.log($(".payment-method-box #item"+index+""));
+					$(this).addClass("active").siblings().removeClass("active");
+				})
+				$(".public-sub li").on("click",function(){
+					var index = $(this).attr("data-index");
+					$(".payment-method-box #item"+index+"").css({"display":"block"}).siblings().css({"display":"none"});
+					$(this).addClass("active").siblings().removeClass("active");
+				})
+			})
+	</script> 
+</html>

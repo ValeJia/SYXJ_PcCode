@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地域馆</title>
+</head>
+<link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/Scenic/Scenic_spot.css">
+<style>
+    .banner {
+        position: relative;
+
+    }
+
+    .first {
+        width: 100%;
+        background: #fff;
+    }
+
+    .content_nav {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .Arrow {
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        text-align: center;
+        background: linear-gradient(transparent, #000);
+        bottom: 0px;
+        left: 0;
+    }
+
+    .Recommend {
+        background: #fff;
+        padding-bottom: 45px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 34px;
+        color: #333;
+        padding: 30px 0 33px 0;
+
+    }
+
+    .zhonghua {
+        display: inline-block;
+        width: 114px;
+        border-bottom: solid 2px #676767;
+        margin-bottom: 8px;
+    }
+
+    .Month {
+        text-align: center;
+        color: #ececec;
+
+    }
+
+    .Month>span {
+        color: #333;
+        font-size: 18px;
+        padding: 10px 25px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .Month_region {
+        display: flex;
+        margin-top: 39px;
+        justify-content: space-between;
+    }
+
+    .Month_region_first {
+        position: relative;
+        width: 469px;
+        height: 420px;
+
+    }
+
+    .Month_region_first>img {
+        width: 469px;
+        height: 420px;
+
+    }
+
+    .Month_region_first_suspension {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 236px;
+        height: 236px;
+        border-radius: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: #fff;
+    }
+
+    .suspension {
+        border-bottom: solid 2px #fff;
+        text-align: center;
+        font-size: 32px;
+        height: 38px;
+        margin: 0 50px;
+        margin-top: 80px;
+
+    }
+
+    .click_num {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .Month_region_aggregate {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Month_region_aggregate_pic {
+        margin-left: 20px;
+        width: 345px;
+        height: 200px;
+        position: relative;
+
+    }
+
+    .Month_region_aggregate_pic img {
+        width: 345px;
+        height: 200px;
+    }
+
+    .Month_region_aggregate_suspension {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 136px;
+        height: 136px;
+        border-radius: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: #fff;
+    }
+
+    .Month_region_aggregate_pic:nth-of-type(2)~div {
+        margin-top: 20px;
+    }
+
+    .Month_region_aggregate_suspension>.suspension {
+        border-bottom: solid 2px #fff;
+        text-align: center;
+        font-size: 24px;
+        height: 38px;
+        margin: 0 20px;
+        margin-top: 30px;
+
+    }
+
+    .Month_region_aggregate_suspension>.click_num {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .Local_consultation {
+        margin-bottom: 37px;
+    }
+
+    .Local_consultation_content {
+        /* background: #f5f5f5; */
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .Local_consultation_content>div {
+        width: 285px;
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .Local_consultation_content>div:nth-of-type(4)~div {
+        margin-top: 30px;
+    }
+
+    .Local_consultation_content>div img {
+        width: 285px;
+        height: 180px;
+    }
+
+    .top_zhezhao {
+        text-align: center;
+        color: #fff;
+        width: 80px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .zhezhao {
+        color: #fff;
+        font-size: 14px;
+        height: 36px;
+        margin-left: 10px;
+        line-height: 2.3;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(transparent, #000);
+    }
+
+    .Local_hotspot {
+        width: 100%;
+        background: #fff;
+    }
+
+    .Local_hotspot_content {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .Local_hotspot_content>figure {
+        width: 285px;
+        height: 180px;
+    }
+
+    .Local_hotspot_content figure img {
+        /* display: inline-block; */
+        width: 285px;
+        height: 180px;
+    }
+
+
+
+    .Local_hotspot_content figure .Scenic_price {
+        width: 202px;
+        display: flex;
+        margin: 0;
+        text-align: left;
+    }
+
+    .Local_hotspot_content figure .Scenic_price>div:last-of-type button {
+        border: solid 1px transparent;
+        text-align: center;
+        width: 90px;
+        height: 30px;
+        background: #ee5555;
+        color: #fff;
+        margin-top: 27px;
+        margin-left: 130px;
+    }
+
+    .Local_hotspot_content figure .rob {
+        display: inline-block;
+        margin-top: 17px;
+        color: #999;
+    }
+
+    .Local_hotspot_content figure {
+        overflow: hidden;
+        height: 240px;
+        background: #fff;
+        margin-top: 20px;
+        width: 285px;
+        position: relative;
+    }
+
+    .Local_hotspot_content_zhezhao {
+        width: 100%;
+        position: absolute;
+        color: #fff;
+        font-size: 12px;
+        bottom: 60px;
+        height: 36px;
+        line-height: 3;
+        padding-left: 10px;
+        background: rgb(0, 0, 0, 0.4);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .Star_class {
+        position: absolute;
+        background: red;
+        top: 0;
+        width: 80px;
+        height: 20px;
+    }
+
+    .Local_hotspot_content figure:nth-of-type(4)~figure {
+        margin-bottom: 30px;
+    }
+
+    .Local_hotspot_content figure:nth-of-type(1)~figure:nth-of-type(4) {
+        margin-bottom: 47px;
+    }
+
+    .Local_hotspot_content figure .Star_class img {
+        width: 15px;
+        height: 15px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="nav_title">
+            <div class="nav_title_head">
+                <p class="nav_title_city"><span>2019年12月10号 星期二 </span><span>新疆天池 晴 低温 -6℃~高温3℃ 微风2级</span></p>
+                <div class="nav_title_city fujian"><a href="#">登录</a><span class="fenge">|</span><a class="fenge"
+                        href="#">注册</a><a href="#">收藏<div class="sjx"></div></a><a href="#">购物车<div class="sjx"></div>
+                    </a><a href="#">客服<div class="sjx"></div></a>
+                    <div class="login1"><img src="../../img/public-top-icon-mobile.png" alt=""></div>
+                    <div class="login2"><img src="../../img/public-top-icon-wx.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav_list">
+                <div class="nav_list_logo">
+                    <img src="../../img/public-top-logo.png" alt="">
+                </div>
+                <span class="fgx"></span>
+                <ul class="nav_list_go">
+                    <li><a href="#">首页<span class="sjx"></span></a></li>
+                    <li><a href="#">地域馆<span class="sjx"></span></a></li>
+                    <li><a href="#">特产<span class="sjx"></span></a></li>
+                    <li><a href="#">美食<span class="sjx"></span></a></li>
+                    <li><a href="#">酒店<span class="sjx"></span></a></li>
+                    <li><a href="#">景区<span class="sjx"></span></a></li>
+                    <li><a href="#">线路<span class="sjx"></span></a></li>
+                    <li><a href="#">文娱<span class="sjx"></span></a></li>
+                    <li><a href="#">六觉新疆<span class="sjx"></span></a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="搜索目的地/景区/酒店"><span><img src="../../img/public-icon-soo.png"
+                            alt=""></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- banner图 -->
+    <div class="banner">
+        <img src="../../img/dyg-banner-bg-01.jpg" alt="">
+        <div class="Arrow"><img src="../../img/xq_icon_sj-bot.png" alt=""></div>
+    </div>
+    <div class="content_nav">
+        <ul class="breadcrumb">
+            <li class="active"><img src="../../img/lb_icon_home.png" alt="">您现在所在的位置:</li>
+            <li class="home"><a href="#">首页</a> <span class="divider">></span></li>
+            <li class="active">地域馆</li>
+        </ul>
+    </div>
+    <div class="first">
+        <div class="content">
+
+            <!-- 月份 -->
+            <div class="Recommend">
+                <p class="title"><span class="zhonghua"></span>&nbsp;当季推荐场馆&nbsp;<span class="zhonghua"></span></p>
+                <p class="Month"><span class="one">1月</span>|<span class="two">2月</span>|<span
+                        class="three">3月</span>|<span class="four">4月</span>|<span class="five">5月</span>|<span
+                        class="six">6月</span>|<span class="seven">7月</span>|<span class="eight">8月</span>|<span
+                        class="nine">9月</span>|<span class="ten">10月</span>|<span class="eleven">11月</span>|<span
+                        class="twelve">12月</span></p>
+                <div class="Month_region">
+                    <!-- 大图 -->
+                    <div class="Month_region_first">
+                        <img src="../../img/dyg-pic-01-284x180.jpg" alt="">
+                        <div class="Month_region_first_suspension">
+                            <p class="suspension">喀什馆</p>
+                            <p class="click_num">3433人点击</p>
+                        </div>
+                    </div>
+                    <!-- 集合图 -->
+                    <div class="Month_region_aggregate">
+                        <div class="Month_region_aggregate_pic">
+                            <img src="../../img/dyg-pic-01-284x180.jpg" alt="">
+                            <div class="Month_region_aggregate_suspension">
+                                <p class="suspension">喀什馆</p>
+                                <p class="click_num">3433人点击</p>
+                            </div>
+                        </div>
+                        <div class="Month_region_aggregate_pic">
+                            <img src="../../img/dyg-pic-01-284x180.jpg" alt="">
+                            <div class="Month_region_aggregate_suspension">
+                                <p class="suspension">喀什馆</p>
+                                <p class="click_num">3433人点击</p>
+                            </div>
+                        </div>
+                        <div class="Month_region_aggregate_pic">
+                            <img src="../../img/dyg-pic-01-284x180.jpg" alt="">
+                            <div class="Month_region_aggregate_suspension">
+                                <p class="suspension">喀什馆</p>
+                                <p class="click_num">3433人点击</p>
+                            </div>
+                        </div>
+                        <div class="Month_region_aggregate_pic">
+                            <img src="../../img/dyg-pic-01-284x180.jpg" alt="">
+                            <div class="Month_region_aggregate_suspension">
+                                <p class="suspension">喀什馆</p>
+                                <p class="click_num">3433人点击</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="title"><span class="zhonghua"></span>&nbsp;本地资讯&nbsp;<span class="zhonghua"></span></p>
+    <div class="Local_consultation">
+        <!-- <p><span>-----</span>本地咨询<span>----</span></p> -->
+        <div class="Local_consultation_content">
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+            <div>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="top_zhezhao">历史遗迹</div>
+                <div class="zhezhao">神秘古城疏勒</div>
+            </div>
+        </div>
+    </div>
+    <div class="Local_hotspot">
+        <p class="title"><span class="zhonghua"></span>&nbsp;本地热点推荐&nbsp;<span class="zhonghua"></span></p>
+        <div class="Local_hotspot_content">
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                <div class="Local_hotspot_content_zhezhao">飞人真人演出</div>
+                <figcaption>
+                    <div class="Scenic_price">
+                        <div>
+                            <p> <span class="rob">销量<font>56
+                                    </font></span></p>
+                            <p>
+                                <font>¥<em>1899</em><span style="color: #666; width: 10px;"></span>
+                                </font>
+                            </p>
+                        </div>
+                        <div><button>立即购买</button></div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <footer>
+        <div class="contact">
+            <ul class="Hotline">
+                <li class="Hotline_line">
+                    <img src="../../img/public-end-icon-phone.png" alt="">
+                    <div>
+                        <p>服务热线</p>
+                        <p>400-123-456</p>
+                    </div>
+                </li>
+                <li class="Hotline_line">
+                    <img src="../../img/public-end-icon-mail.png" alt="">
+                    <p style="line-height: 2.9;">意见反馈</p>
+                </li>
+            </ul>
+            <ul class="Opinion">
+                <li class="first_title">手游新疆旅游网</li>
+                <li>覆盖全疆100多个县</li>
+                <li>10,000,000</li>
+                <li>8030家酒店</li>
+                <li>1000家新疆特色餐饮</li>
+                <li>手游新疆APP带您领略新疆风貌</li>
+            </ul>
+            <ul class="Opinion">
+                <li class="first_title">关于我们</li>
+                <li>关于手游新疆</li>
+                <li>联系我们</li>
+                <li>隐私政策</li>
+                <li>商标声明</li>
+                <li>新疆非遗入住协议</li>
+                <li>商城平台服务协议</li>
+                <li>网站地图</li>
+            </ul>
+            <ul class="Opinion">
+                <li class="first_title">快速导航</li>
+                <li>门票购买</li>
+                <li>线路选择</li>
+                <li>旅游特价</li>
+                <li>租车服务</li>
+                <li>旅游问答</li>
+                <li>订火车票</li>
+                <li>订购机票</li>
+                <li>旅游保险</li>
+                <li>旅游资讯</li>
+                <li>APP下载</li>
+            </ul>
+            <div class="QR_code">
+                <p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+                <img src="../../img/public-end-ewm-1.jpg" alt="">
+                <p class="QR_code_content">下载有惊喜哦</p>
+            </div>
+            <div class="QR_code">
+                <p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+                <img src="../../img/public-end-ewm-2.jpg" alt="">
+                <p class="QR_code_content">快来关注我吧</p>
+            </div>
+
+        </div>
+        <div class="link">
+            <p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span>
+            </p>
+            <p>友情链接:<span>百度网旅游</span>
+                <span>途牛网旅游</span>
+                <span>人民网旅游</span>
+                <span>奇艺旅游</span>
+            </p>
+        </div>
+        <div class="website">
+            <div class="love">
+                <p>新疆的旅游路上,我们一直都在</p>
+                <p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png"
+                        alt=""><img src="../../img/public-end_icon-3.png" alt=""></p>
+            </div>
+            <div class="Development">
+                <p><img src="../../img/public-bot-logo.png" alt=""></p>
+                <p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com) 版权所有</span><span>新ICP备18001279号-1</span></p>
+                <p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050
+                    </span></p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script>
+    (function () {
+        // console.log(22%10)
+        // console.info(Math.ceil(22/10))
+        Local_consultation_contentUrl = "http://www.shouyouxinjiang.cn/retailers2.jspx";
+        $.ajaxSettings.async = false;
+        $.ajax({
+            type: 'get',//类型
+            url: Local_consultation_contentUrl,//地址
+            dataType: 'json',
+            data: {
+                "areaCode": "650000"
+            },
+            //请求成功
+            success: function (data) {
+                // console.log(data.index2)
+                var listStr = '';
+                var productList = data.index2;
+                //     var cateList = data.wm.cateList;
+                for (var i = 0; i < productList.length; i++) {
+                    listStr += `   <div>
+                                    <img src="`+ productList[i].titleImg + `"" alt="">
+                                    <div class="top_zhezhao">`+ productList[i].channelName + `</div>
+                                    <div class="zhezhao">`+ productList[i].title + `</div>
+                                    </div> `;
+                }
+                $(".Local_consultation_content").html(listStr)
+
+
+            }
+        })
+
+
+        Local_hotspot_contentUrl = "http://www.shouyouxinjiang.com/api/app/appCall";
+        $.ajaxSettings.async = false;
+        jsonParam = {
+            "opetype": "search",
+            "map": {
+                "sortBy": "mount",
+                "serverType": "1",
+                "sortType": "1",
+                "lat": 43.808624,
+                "lng": 87.623796, 
+                 "cityCode": "650000",
+                "nowPage": "1",
+                "pageShow": "3"
+            }
+        }
+        $.ajax({
+            type: 'POST',//类型
+            url: Local_hotspot_contentUrl,//地址
+            dataType: 'json',
+            data:jsonParam,
+            //请求成功
+            success: function (data) {
+                console.log(data)
+                var listStr = '';
+                var productList = data.index2;
+                //     var cateList = data.wm.cateList;
+                // for (var i = 0; i < productList.length; i++) {
+                //     listStr += ``
+                // }
+
+                    //  $(".Local_consultation_content").html(listStr)
+
+            }
+        })
+    })()
+</script>
+
+</html>

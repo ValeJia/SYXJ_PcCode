@@ -1,0 +1,909 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>手游新疆特产列表页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common/Scenic_spot.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/index/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/specialty/specialty-list.css"/>
+		<style type="text/css">
+			.fa-sort .up-on,.fa-sort .down-on{
+				display: none;
+			}
+			.fa-sort-up >img.up-on{
+				display: inline-block;
+			}
+			.fa-sort-up >img.up{
+				display: none;
+			}
+			.fa-sort-up >img.down-on{
+				display: none;
+			}
+			.fa-sort-down >img.down-on {
+				display: inline-block;
+			}
+			.fa-sort-down >img.down {
+				display: none;
+			}
+			.fa-sort-down >img.up-on {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+	        <div class="nav_title">
+	            <div class="nav_title_head">
+	                <p class="nav_title_city"><span>2019年12月10号 星期二 </span><span>新疆天池 晴 低温 -6℃~高温3℃ 微风2级</span></p>
+	                <div class="nav_title_city fujian"><a href="#">登录</a><span class="fenge">|</span><a class="fenge"
+	                        href="#">注册</a><a href="#">收藏<div class="sjx"></div></a><a href="#">购物车<div class="sjx"></div>
+	                    </a><a href="#">客服<div class="sjx"></div></a>
+	                    <div class="login1"><img src="../../img/public-top-icon-mobile.png" alt=""></div>
+	                    <div class="login2"><img src="../../img/public-top-icon-wx.png" alt=""></div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="nav">
+	            <div class="nav_list">
+	                <div class="nav_list_logo">
+	                    <img src="../../img/public-top-logo.png" alt="">
+	                </div>
+	                <span class="fgx"></span>
+	                <ul class="nav_list_go">
+	                    <li><a href="#">首页<span class="sjx"></span></a></li>
+	                    <li><a href="#">地域馆<span class="sjx"></span></a></li>
+	                    <li><a href="#">特产<span class="sjx"></span></a></li>
+	                    <li><a href="#">美食<span class="sjx"></span></a></li>
+	                    <li><a href="#">酒店<span class="sjx"></span></a></li>
+	                    <li><a href="#">景区<span class="sjx"></span></a></li>
+	                    <li><a href="#">线路<span class="sjx"></span></a></li>
+	                    <li><a href="#">文娱<span class="sjx"></span></a></li>
+	                    <li><a href="#">六觉新疆<span class="sjx"></span></a></li>
+	                </ul>
+	                <div class="search">
+	                    <input type="text" placeholder="搜索目的地/景区/酒店"><span><img src="../../img/public-icon-soo.png"
+	                            alt=""></span>
+	                </div>
+	            </div>
+	        </div>
+	    </nav>
+	    <div class="banner">
+	        <div class="swiper-container">
+	            <div class="swiper-wrapper">
+	                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+	                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+	                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+	            </div>
+	            <!-- 如果需要分页器 -->
+	            <div class="swiper-pagination"></div>
+	
+	            <!-- 如果需要导航按钮 -->
+	            <div class="swiper-button-prev swiper-button-black"></div>
+	            <div class="swiper-button-next  swiper-button-black"></div>
+	        </div>
+	    </div>
+		<div id="">
+			<div class="content-int">
+				<div class="content-width">
+					<!--面包屑-->
+					<div class="content-width">
+						<div class="crumbs"><span><img src="../../img/list/lb_icon_home.png"/></span><span class="m_l_9"></span>您现在所在的位置：<span><a href="../home/index.html">首页</a></span>>特产列表页</div>
+					</div>
+					<!--以下为左右-->
+					<div class="g-box content-width flex" >
+						<!--以下为左-->
+						<div class="g-listbox-l m-pdlist">
+							<div class="bgfff">
+								<div class="m-screenselector">
+									<div class="condition">
+										<ul class="search-criteria-ul" >
+											特产分类：
+											<li><div class="on">不限</div></li>
+											<li><div class="">酒类</div></li>
+											<li><div class="">生鲜食品</div></li>
+											<li><div class="">饮料</div></li>
+											<li><div class="">休闲食品</div></li>
+											<li><div class="">其他</div></li>
+										</ul>
+									</div>
+									<div class="condition">
+										<ul class="search-criteria-ul" >
+											特产细分：
+											<li><div class="on ">不限</div></li>
+											<li><div class="">酒类</div></li>
+											<li><div class="">生鲜食品</div></li>
+											<li><div class="">饮料</div></li>
+											<li><div class="">休闲食品</div></li>
+											<li><div class="">其他</div></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="m_t_20 bgfff">
+								<div class="pd-order">
+									<div class="po-order f-fl">
+										<ul>
+											<li id="productList_sort_score"><span name="score">综合排序</span></li>
+											<li id="productList_sort_sales"><span name="sales">销量</span>
+												<div class="inline-block" style="display: none;"><img src="../../img/list/lb_icon_s_click.png" alt=""><img src="../../img/list/lb_icon_j_n.png" alt=""></div>
+												<i class="fa fa-sort-up">
+													<img class="up-on" src="../../img/list/lb_icon_s_click.png" alt="">
+													<img class="up" src="../../img/list/lb_icon_s_n.png" alt="">
+													<img class="down-on" src="../../img/list/lb_icon_j_click.png" alt="">
+													<img class="down" src="../../img/list/lb_icon_j_n.png" alt="">
+												</i>
+											</li>
+											<li id="productList_sort_commentCount"><span name="commentCount">评论数</span>
+												<i class="fa fa-sort-down">
+													<img class="up-on" src="../../img/list/lb_icon_s_click.png" alt="">
+													<img class="up" src="../../img/list/lb_icon_s_n.png" alt="">
+													<img class="down-on" src="../../img/list/lb_icon_j_click.png" alt="">
+													<img class="down" src="../../img/list/lb_icon_j_n.png" alt="">
+												</i>
+											</li>
+											<li id="productList_sort_shelveTime"><span name="shelveTime">最新发布</span>
+												<i class="fa fa-sort">
+													<img class="up-on" src="../../img/list/lb_icon_s_click.png" alt="">
+													<img class="up" src="../../img/list/lb_icon_s_n.png" alt="">
+													<img class="down-on" src="../../img/list/lb_icon_j_click.png" alt="">
+													<img class="down" src="../../img/list/lb_icon_j_n.png" alt="">
+												</i>
+											</li>
+											<li id="productList_sort_lowestPrice"><span name="lowestPrice">价格</span>
+												<i class="fa fa-sort">
+													<img class="up-on" src="../../img/list/lb_icon_s_click.png" alt="">
+													<img class="up" src="../../img/list/lb_icon_s_n.png" alt="">
+													<img class="down-on" src="../../img/list/lb_icon_j_click.png" alt="">
+													<img class="down" src="../../img/list/lb_icon_j_n.png" alt="">
+												</i>
+											</li>
+								
+											<li class="area-p">
+												<div>
+													<span>￥</span> <input onkeyup="" onblur="" id="startPrice" type="text" value="">
+												</div> <span>-</span>
+												<div>
+													<span>￥</span> <input onkeyup="" onblur="" id="endPrice" type="text" value="">
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="po-search f-fr">
+										<span>关键字</span>
+										<input type="text" placeholder="" id="keywordSearch">
+										<button type="button" class="btn btn-info" id="priceSearch">确定</button>
+										<button type="button" class="btn btn-success btn-cancel" id="clearSearch">取消</button>
+										<!--<a id="priceSearch" href="javascript:void(0)" class="s-btn">确定</a>
+										<a id="clearSearch" href="javascript:void(0)" class="s-btn s-btn-white">清空</a>-->
+									</div>
+								</div>
+							</div>
+							<div class="m_t_23 bgfff">
+								<div class="shop-list">
+									<div class="shop-goods">
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+									</div>
+									<div class="shop-goods">
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+									</div>
+									<div class="shop-goods">
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+										<div class="shop-goods-item">
+											<div class="m_b_10">
+												<div class="goods-img-box">
+													<div class="goods-star-box">
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+														<img class="goods-star" src="../../img/list/lb_icon_xing-bai.png"/>
+													</div>
+													<img class="goods-icon" src="../../img/list/lb-pic-left-01-202x150.jpg"/>
+													<div class="goods-block-box" style="">
+														<div class="goods-name ellipsis-2 m_b_0">小银水果酒</div>
+													</div>
+													<div class="white-mask"></div>
+												</div>
+											</div>
+											<div class="shop-message">
+												<p>销量<span>23</span></p>
+												<div class="price-red-box f-fl f14"><span class="price-red"><i class="f14">￥</i><span class="f24">148</span></span>&nbsp;起</div>
+												<button type="button" class="btn btn-danger">立即购买</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="m-pagination m-components" style="display: none;">
+									<div class="pagebox">
+										1
+								
+										<a href="javascript:;" class="prev disabled">
+											<span class="" style="width:100%;height: 100%;background: url(../../img/details/xq_icon_sj-left.png) no-repeat center; "></span>
+											<!--<img src="../../img/details/xq_icon_sj-left.png"/>-->
+										</a>
+								
+										<a class="curr pg-current" href="javascript:showSearchProduct('1','20')" title="第2页" >1</a>
+										<a class="pi _j_pageitem" href="javascript:showSearchProduct('1','20')" title="第2页" data-page="2">2</a>
+										<a class="pi _j_pageitem" href="javascript:showSearchProduct('1','20')" title="第2页" data-page="3">3</a>
+								
+										<a href="javascript:;" class="next disabled">
+											<!--<div class="" style="width:100%;height: 100%;background: url(../../img/details/xq_icon_sj-right.png) no-repeat center; "></div>-->
+											<!--<img src="../../img/details/xq_icon_sj-right.png"/>-->
+										</a>
+										<span>共<em>1</em>页，到第</span> 
+										<input type="text" id="pageSearch" value="1" class="input-txt"> <span>页</span>
+										<a href="javascript:jumpSearchProduct(1,20);" class="btn btn-primary">确定</a>
+									</div>
+								</div>
+								<div class="y_page">
+									<ul class="pagination">
+								
+										<li class="y_pgbt disabled"><span>&lt;</span></li>
+								
+										<li class="active">
+											<a onclick="toPage('1');" title="第1页">1</a>
+										</li>
+								
+										<li>
+											<a onclick="toPage('2');" title="第2页">2</a>
+										</li>
+								
+										<li>
+											<a onclick="toPage('3');" title="第3页">3</a>
+										</li>
+								
+										<li>
+											<a onclick="toPage('4');" title="第4页">4</a>
+										</li>
+								
+										<li>
+											<a onclick="toPage('5');" title="第5页">5</a>
+										</li>
+								
+										<li class="y_pgbt">
+											<a onclick="toPage('2');" title="下一页">&gt;</a>
+										</li>
+								
+									</ul>
+									共6页，到第<input class="form-control" type="text" value="" id="goPage">页
+									<a class="btn btn-primary" href="javascript:goPage()" id="goPage" title="确定">确定</a>
+								</div>
+							</div>
+							
+						</div>
+						<!--以下为右-->
+						<div class="g-listbox-r">
+							<div class="bgfff">
+								<div class="m-bbox">
+									<div class="m-bbox-tle"  style="">
+										商品精选
+										<span class="syicon syicon-arrow"></span>
+									</div>
+								</div>
+								<div class="bgfff bg-yin">
+									<div class="g-listbox-r-child">
+										<div style="position: relative;"><img src="../../img/list/lb_pic_224x170.jpg" alt="" class="img-left"/>
+										   <div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+										   <div class="g-listbox-r-child-head">NO.1</div>
+										</div>
+										<div class="shop-message" >
+											<div class="g-listbox-r-child-p"><span class="price"><span class="f14">&yen;</span><span class="" style="">1998</span></span>&nbsp;&nbsp;起</div>
+											<div class="g-listbox-r-child-p2">立即抢购</div>
+										</div>
+									</div>
+									<div class="g-listbox-r-child">
+										<div style="position: relative;"><img src="../../img/list/lb_pic_224x170.jpg" alt="" class="img-left"/>
+										   <div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+										   <div class="g-listbox-r-child-head">NO.1</div>
+										</div>
+										<div class="shop-message" >
+											<div class="g-listbox-r-child-p"><span class="price"><span class="f14">&yen;</span><span class="" style="">1998</span></span>&nbsp;&nbsp;起</div>
+											<div class="g-listbox-r-child-p2">立即抢购</div>
+										</div>
+									</div>
+									<div class="g-listbox-r-child">
+										<div style="position: relative;"><img src="../../img/list/lb_pic_224x170.jpg" alt="" class="img-left"/>
+										   <div class="g-listbox-r-child-biao">罗布泊大海3日游(含门票)</div>
+										   <div class="g-listbox-r-child-head">NO.1</div>
+										</div>
+										<div class="shop-message" >
+											<div class="g-listbox-r-child-p"><span class="price"><span class="f14">&yen;</span><span class="" style="">1998</span></span>&nbsp;&nbsp;起</div>
+											<div class="g-listbox-r-child-p2">立即抢购</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div>
+								<img src="../../img/list/lb_pic_gg_260x218.jpg" alt="" class="img-left-bottom" />
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		<footer>
+	    	<div class="contact">
+	    		<ul class="Hotline">
+	    			<li class="Hotline_line">
+	    				<img src="../../img/public-end-icon-phone.png" alt="">
+	    				<div>
+	    					<p>服务热线</p>
+	    					<p>400-123-456</p>
+	    				</div>
+	    			</li>
+	    			<li class="Hotline_line">
+	    				<img src="../../img/public-end-icon-mail.png" alt="">
+	    				<p style="line-height: 2.9;">意见反馈</p>
+	    			</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">手游新疆旅游网</li>
+	    			<li>覆盖全疆100多个县</li>
+	    			<li>10,000,000</li>
+	    			<li>8030家酒店</li>
+	    			<li>1000家新疆特色餐饮</li>
+	    			<li>手游新疆APP带您领略新疆风貌</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">关于我们</li>
+	    			<li>关于手游新疆</li>
+	    			<li>联系我们</li>
+	    			<li>隐私政策</li>
+	    			<li>商标声明</li>
+	    			<li>新疆非遗入住协议</li>
+	    			<li>商城平台服务协议</li>
+	    			<li>网站地图</li>
+	    		</ul>
+	    		<ul class="Opinion">
+	    			<li class="first_title">快速导航</li>
+	    			<li>门票购买</li>
+	    			<li>线路选择</li>
+	    			<li>旅游特价</li>
+	    			<li>租车服务</li>
+	    			<li>旅游问答</li>
+	    			<li>订火车票</li>
+	    			<li>订购机票</li>
+	    			<li>旅游保险</li>
+	    			<li>旅游资讯</li>
+	    			<li>APP下载</li>
+	    		</ul>
+	    		<div class="QR_code">
+	    			<p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+	    			<img src="../../img/public-end-ewm-1.jpg" alt="">
+	    			<p class="QR_code_content">下载有惊喜哦</p>
+	    		</div>
+	    		<div class="QR_code">
+	    			<p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+	    			<img src="../../img/public-end-ewm-2.jpg" alt="">
+	    			<p class="QR_code_content">快来关注我吧</p>
+	    		</div>
+	    
+	    	</div>
+	    	<div class="link">
+	    		<p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span></p>
+	    		<p>友情链接:<span>百度网旅游</span>
+	    			<span>途牛网旅游</span>
+	    			<span>人民网旅游</span>
+	    			<span>奇艺旅游</span>
+	    		</p>
+	    	</div>
+	    	<div class="website">
+	    		<div class="love">
+	    			<p>新疆的旅游路上,我们一直都在</p>
+	    			<p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png" alt=""><img src="../../img/public-end_icon-3.png" alt=""></p>
+	    		</div>
+	    		<div class="Development">
+	    			<p><img src="../../img/public-bot-logo.png" alt=""></p>
+	    			<p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com)    版权所有</span><span>新ICP备18001279号-1</span></p>
+	    			<p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050 </span></p>
+	    		</div>
+	    	</div>
+	    
+	    </footer>
+	    
+	    <div class="toolbar">
+			<div class="toolbar-top">
+				<a role="button" class="btn _j_gotop">
+					<i class="icon_top"></i>
+					<!--<em>返回顶部</em>-->
+				</a>
+			</div>
+		</div>
+	    
+	</body>
+	<script src="../../js/jquery/jquery.js"></script>
+		<script src="../../js/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/swiper/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript ">
+			$(function(){
+				
+				$("#productComponents").delegate(".j_btnsConfirm","click",function(){
+			        var attrName = $(this).parents(".sl-wrap").find(".j_selectedDiv").data("attrName");
+			        var attrValue = $(this).parents(".sl-wrap").find(".j_selectedDiv").data("attrValue");
+//			        search_productComponents(attrName,attrValue);
+			    })
+				//条件选中刷新页面
+				function doSearch_productComponents(ts,attrName,attrValue){
+					var uri = window.location.href;
+				    var attrDiv = $(ts).parents(".sl-wrap");
+				    if(attrDiv.hasClass("multiple")){
+				        multipleSelect_productComponents(attrDiv,attrName,attrValue);
+				        return false;
+				    }
+				   
+				     search_productComponents(attrName,attrValue,uri);
+				   
+				}
+				function multipleSelect_productComponents(attrDiv,attrName,attrValue){
+				    var selectedDiv = attrDiv.find(".j_selectedDiv");
+				    var selectedAttr = selectedDiv.find(".j_selected");
+				    selectedDiv.data("attrName",attrName);
+				    selectedDiv.show();
+				    //添加选中条件
+				    $(".j_btnsConfirm").removeClass("disabled");
+				    var selectedAttrValue = selectedDiv.data("attrValue");
+				    if(!$.isEmptyObject(selectedAttrValue)){
+				    	
+				    	if(selectedAttrValue.indexOf(attrValue)>-1){
+				    		return;
+				        }
+				        selectedAttrValue+="、"+attrValue;
+				    }else{
+				        selectedAttrValue="";
+				        selectedAttrValue+=attrValue;
+				    }
+				    
+				    selectedAttr.append("<li style='display:block;' class='j_selectedAttr selected'> " +
+				            "<a href='javascript:void(0)' title='"+attrValue+"'> " +
+				            "<i></i>"+attrValue+"</a> " +
+				            "</li>");
+				    selectedDiv.data("attrValue",selectedAttrValue);
+				}
+				
+				
+				/*选择分类*/
+				$(".search-criteria-ul li >div").on("click",function(){
+					
+					if(!$(this).hasClass("on")){
+						$(this).addClass("on").parent().siblings().children().removeClass("on");
+					}else{
+						$(this).removeClass("on");
+					}
+				})
+				
+				/*筛选排序确定操作*/
+				$("#priceSearch").click(function(){
+			    	var startPrice=$("#startPrice").val();
+			    	var endPrice=$("#endPrice").val();
+			    	var keyword=$("#keywordSearch").val();
+			    	//alert(startPrice);
+			    	
+//			    	 Utils.changeUrlParam("startPrice",startPrice,window.location.href);
+//			         Utils.changeUrlParam("endPrice",endPrice,window.location.href);
+//			         Utils.changeUrlParam("keyword",keyword,window.location.href);
+//			         Utils.changeUrlParam("nowPage","1",window.location.href);
+			    	
+			    	var queryData = {
+			                "startPrice":startPrice,
+			                "endPrice":endPrice,
+			                "nowPage":"1"
+			            }
+//			            ajaxLoadData(queryData);
+			    	
+			    	
+			    })
+				
+				/*筛选排序取消操作*/
+				$("#clearSearch").click(function(){
+			    	$("#startPrice").val('');
+			    	$("#endPrice").val('');
+			    	$("#keywordSearch").val('');
+			    })
+				
+				/*筛选排序*/
+				 var sortBy="asc";
+				$(".po-order li[id^='productList_sort_']").on("click",function(){
+					var nameValue = $(this).find("span").attr("name");
+				            var sortType = "1";
+				            var type = $(this).find("i").attr("class");
+//				            console.log(type);return;
+				            if(type=="fa fa-long-arrow-up"){
+				                sortType="1";
+				            }else if(type=="fa fa-long-arrow-down"){
+				                sortType="2";
+							}
+							if(sortBy == "asc") {
+								sortType = "1";
+								$(this).find("i").attr("class", "fa fa-sort-up");
+								sortBy = "desc"
+							
+							} else if(sortBy == "desc") {
+								sortType = "2";
+								$(this).find("i").attr("class", "fa fa-sort-down");
+								sortBy = "asc"
+							
+							}
+//				            Utils.changeUrlParam("sortBy",nameValue,window.location.href);
+//				            Utils.changeUrlParam("sortType",sortType,window.location.href);
+//				            Utils.changeUrlParam("nowPage","1",window.location.href);
+//				            var queryData = {
+//				                "sortBy":nameValue,
+//				                "sortType":sortType,
+//				                "nowPage":"1"
+//				            }
+//				            ajaxLoadData(queryData);
+				})
+				
+				
+				
+//				$(".po-order ul li").on("click",function(){
+////					var index = 1;
+//					$(this).children().eq(0).addClass("on");
+//					console.log($(this).children("i"));
+//					if($(this).children("i").hasClass("fa-sort")){
+//						$(this).children("i").removeClass("fa-sort").addClass("fa-sort-up");
+//					}else if($(this).children("i").hasClass("fa-sort-up")){
+//						$(this).children("i").removeClass("fa-sort").addClass("fa-sort-up");
+//					}else if($(this).children("i").hasClass("fa-sort-down")){
+//						$(this).children("i").removeClass("fa-sort").addClass("fa-sort-down");
+//					}else{
+//						
+//					}
+//					
+////					$(this).children().eq(0).addClass("on");
+////					$(this).children().find("span").addClass("on").find("fa").removeClass("fa-sort").addClass("fa-sort-up");
+////					$(this).children().siblings().children().removeClass("on");
+//					
+//				})
+				
+				
+				
+				
+				/*分类处理*/
+				function search_productComponents(attrName,attrValue,url){
+				    var uri = window.location.href;
+				    if(url){
+				    	uri = url;
+				    }
+				    //处理规格属性
+				    if("categoryUuid"==attrName){
+				    	if(uri.indexOf("cat") != -1){
+				    		 uri = replaceUriParam("cat",attrValue,uri);
+				    		 //Utils.changeUrlParam("cat",attrValue,window.location.href);
+				    	}else{
+				    		uri+="&cat="+attrValue;
+				    	}
+				    	
+				    }
+				    else{
+				    	 var reg = new RegExp("(^|&)attrValue=([^&]*)");
+				    	    var r = uri.match(reg);
+				    	    if(!$.isEmptyObject(r)){
+				    	        var attrRep = r[2].match(new RegExp("(^|%40)"+attrName+"_(((?!%40).)*)"));
+				    	        if(!$.isEmptyObject(attrRep)){
+				    	            uri=uri.replace(attrRep[0],attrName+"_"+attrValue);
+				    	        }else{
+				    	            var newAttr = r[0]+"%40"+attrName+"_"+attrValue;
+				    	            uri=uri.replace(r[0],newAttr);
+				    	        }
+				    	    }else{
+				    	        uri+="&attrValue="+attrName+"_"+attrValue;
+				    	    }
+				    	   
+				    }
+				    window.location.href = uri;
+				   
+				    //处理分类，选择属性需要带上分类
+				    //点击条件搜索中的条件，需要带上 分类uuid//
+				/*	var categroyUuid = $("#productComponents").attr("data-categroyUuid");
+					if(categroyUuid){
+						 uri = replaceUriParam("cat",categroyUuid,uri);
+					}*/
+				   
+				}
+				
+				/*列表页接口*/
+				function ajaxLoadData(queryData){
+					var defaultData = {
+					            "keyword":_getUrlParam("keyword"),
+					            "cat":_getUrlParam("cat"),
+					            "sortType":_getUrlParam("sortType"),
+					            "attrValue":_getUrlParam("attrValue"),
+					            "sortBy":_getUrlParam("sortBy"),
+					            "nowPage":_getUrlParam("nowPage"),
+					            "pageShow":'20'
+				
+					        }
+					$.extend(defaultData,queryData);
+					
+					$.ajax({
+				        "url":"/frontshow/productlist/ajaxProductList",
+				        data: defaultData,
+				        "success":function(data){
+				            // ts._initPages(data.totalNum,data.pageShow);
+				        	//无刷新url
+				        	  	
+				        	var uri = window.location.href;
+				            // var reg = new RegExp("(^|&)nowPage=([^&]*)");
+				            // var r = uri.match(reg);
+				            // var words = $.isEmptyObject(r)?"":r[0];
+				
+				            //  changeUrl(uri,words,"&nowPage="+obj.curr);
+				              
+				              
+				        	$("#ajaxPageData").html("");
+				        	$("#ajaxPageData").html(data);
+				        	var scrollHeight = $(window).scrollTop();
+				
+				        	//跳转锚点
+//				            $("html,body").animate({scrollTop:scrollHeight}, 0);
+				        }
+				    })
+				}
+				
+//				http://www.shouyouxinjiang.com/frontshow/productlist/productList
+				
+				
+				
+			})
+	</script> 
+</html>

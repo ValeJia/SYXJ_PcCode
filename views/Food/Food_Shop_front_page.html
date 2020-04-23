@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食店铺首页</title>
+</head>
+<link rel="stylesheet" href="../../css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/swiper.min.css">
+<link rel="stylesheet" href="../../css/Scenic_spot.css">
+<link rel="stylesheet" href="../../css/Shop_front_page.css">
+<style>
+    .content {
+        height: 430px;
+        position: relative;
+    }
+
+    .shop_content {
+        position: absolute;
+        top: -40px;
+        width: 1200px;
+        height: 440px;
+        background: #fff;
+        z-index: 99999999;
+        box-shadow: 0px 6px 6px 3px #e4e4e4;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .shop_content_left {
+        width: 520px;
+    }
+
+    .xinxi {
+        margin: 0 32px;
+        padding-bottom: 31px;
+        border-bottom: solid 1px #f5f5f5;
+    }
+
+    .shop_content_left_title {
+        font-weight: 550;
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .shop_content_left_adive {
+        line-height: 2;
+        /* padding-left: 32px; */
+        font-size: 12px;
+        color: #333;
+    }
+
+
+    .shop_content_right img {
+        box-shadow: 0px 6px 6px 3px #e4e4e4;
+        width: 650px;
+        height: 380px;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+
+    .service_conent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service_conent img {
+        margin-right: 60px;
+        margin-bottom: 30px;
+    }
+
+    .service_list {
+        margin-left: 32px;
+    }
+
+    .service_list span {
+        font-size: 12px;
+        color: #666;
+        margin-top: 14px;
+        display: inline-block;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    .service_list span:first-of-type~span {
+        padding: 0 10px;
+        border-left: #666 solid 1px;
+
+    }
+
+    .zhezhao {
+        height: 30px;
+        line-height: 2.5;
+    }
+
+    .Scenic_price {
+        margin-top: 6px;
+        text-align: left;
+        margin-left: 10px;
+    }
+    .Scenic_price{
+        display: flex;
+        justify-content: space-between;
+    }
+    .Add_menu{
+        margin-top: 10px;
+        display: inline-block;
+        width: 76px;
+        height: 30px;
+        background: #ff5555;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        line-height: 2.5;
+        margin-right:0;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="nav_title">
+            <div class="nav_title_head">
+                <p class="nav_title_city"><span>2019年12月10号 星期二 </span><span>新疆天池 晴 低温 -6℃~高温3℃ 微风2级</span></p>
+                <div class="nav_title_city fujian"><a href="#">登录</a><span class="fenge">|</span><a class="fenge"
+                        href="#">注册</a><a href="#">收藏<div class="sjx"></div></a><a href="#">购物车<div class="sjx"></div>
+                    </a><a href="#">客服<div class="sjx"></div></a>
+                    <!-- <div class="login1"><img src="../../img/public-top-icon-mobile.png" alt=""></div>
+                    <div class="login2"><img src="../../img/public-top-icon-wx.png" alt=""></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav_list">
+                <div class="nav_list_logo">
+                    <img src="../../img/public-top-logo.png" alt="">
+                </div>
+                <span class="fgx"></span>
+                <div class="shop">
+                    <p class="shop_title"><span>南云尚品快餐店</span>
+                        <!-- <button class="goTO_shop">进入店铺</button> -->
+                    </p>
+                    <p class="shop_score">[&nbsp;&nbsp;关注人数<span
+                            class="shop_score_describe Fraction">4.97</span>|&nbsp;&nbsp;商品评分<span
+                            class="shop_score_service Fraction">3.85</span>|&nbsp;&nbsp;综合评分<span
+                            class="shop_score_logistics Fraction">3.99</span>&nbsp;&nbsp;]</p>
+                    <p><button class="Collection_shop">+ 收藏店铺</button></p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="搜索目的地/景区/酒店"><span class="seach_all Search">搜全网</span><span
+                        class="search_this Search">搜本店</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../../img/public-banner-01.jpg" alt=""></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev swiper-button-black"></div>
+            <div class="swiper-button-next  swiper-button-black"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="shop_content">
+            <div class="shop_content_left">
+                <img src="../../img/food/dp-pic-02.png" alt="">
+                <div class="xinxi">
+                    <p class="shop_content_left_title">云南尚品快餐店</p>
+                    <p class="shop_content_left_adress shop_content_left_adive">
+                        地址:<span>昌吉市中山路27号小区和诚品一期商铺8号楼104室</span></p>
+                    <p class="shop_content_left_tell shop_content_left_adive">电话:<span>0991-6663569</span></p>
+                    <p class="shop_content_left_timer shop_content_left_adive">营业时间:<span>周一至周日12:00-23:00</span></p>
+                </div>
+                <div class="service_conent">
+                    <div class="service_conent_left">
+                        <p class="service"
+                            style="font-size: 16px; color: #333; margin-top: 33px; margin-left: 32px; font-weight: 550;">
+                            商家服务</p>
+                        <p class="service_list"><span>餐厅服务</span><span>空调</span></p>
+                    </div>
+                    <img src="../../img/food/dp-pic-bg01.jpg" alt="">
+                </div>
+            </div>
+            <div class="shop_content_right">
+                <img src="../../img/food/dp-pic-01-670x380.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="commodity">
+        <div class="commodity_title">
+            <img src="../../img/dp-tit-icon-01.png" alt="">
+            <p><span class="zhonghua"></span>&nbsp;餐品橱窗&nbsp;<span class="zhonghua"></span></p>
+            <div class="commodity_content">
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p>芦花鸡 (小份)</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">加入菜单</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p>想你所想-云端之旅三亚双飞6日游</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p>想你所想-云端之旅三亚双飞6日游</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p>想你所想-云端之旅三亚双飞6日游</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p>想你所想-云端之旅三亚双飞6日游</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="commodity_content_list">
+                    <img src="../../img/dp-pic-0-224x150.jpg" alt="">
+                    <div class="Corner_marker">
+                        <img src="../../img/public-icon-01.png" alt="">
+                    </div>
+                    <div class="Corner_marker_content">
+                        <div class="Corner_marker_content_list">
+                            <p><span>2899</span>人购买</p>
+                            <p>想你所想-云端之旅三亚双飞6日游</p>
+                        </div>
+                        <div class="Corner_marker_content_buy">
+                            <p class="Corner_marker_content_money">&yen;<i>4980.0</i></p>
+                            <p class="Corner_marker_content_buy_Add_menu">立即购买</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="Best_Sellers">
+        <div class="commodity">
+            <div style="background: #f5f5f5; width: 100%; text-align: center; padding-top: 20px;">
+                <img src="../../img/dp-tit-icon-02.png" alt="">
+                <p style="padding-bottom: 20px; margin-top: 15px;"><span class="zhonghua"></span>&nbsp;热卖商品&nbsp;<span
+                        class="zhonghua"></span></p>
+            </div>
+            <div class="commodity_title">
+                <div class="Best_Sellers_list">
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../img/dp-pic-03-224x170.jpg" alt="">
+                        <div class="zhezhao">秘制羊里脊抓饭</div>
+                        <figcaption>
+                            <div class="Scenic_price">
+                                <div class="menu">
+                                    <p class="Sales_volumes" style="font-size:12px; color: #999;">月售<span>96</span>份</p>
+                                    <p class="Unit_Price" style="font-size: 14px;">&yen;&nbsp;<span
+                                            style="font-size: 24px;">30</span></p>
+                                </div>
+                                <div class="Add_menu"><span>加入菜单</span></div>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="contact">
+            <ul class="Hotline">
+                <li class="Hotline_line">
+                    <img src="../../img/public-end-icon-phone.png" alt="">
+                    <div>
+                        <p>服务热线</p>
+                        <p>400-123-456</p>
+                    </div>
+                </li>
+                <li class="Hotline_line">
+                    <img src="../../img/public-end-icon-mail.png" alt="">
+                    <p style="line-height: 2.9;">意见反馈</p>
+                </li>
+            </ul>
+            <ul class="Opinion">
+                <li class="first_title">手游新疆旅游网</li>
+                <li>覆盖全疆100多个县</li>
+                <li>10,000,000</li>
+                <li>8030家酒店</li>
+                <li>1000家新疆特色餐饮</li>
+                <li>手游新疆APP带您领略新疆风貌</li>
+            </ul>
+            <ul class="Opinion">
+                <li class="first_title">关于我们</li>
+                <li>关于手游新疆</li>
+                <li>联系我们</li>
+                <li>隐私政策</li>
+                <li>商标声明</li>
+                <li>新疆非遗入住协议</li>
+                <li>商城平台服务协议</li>
+                <li>网站地图</li>
+            </ul>
+            <ul class="Opinion">
+                <li class="first_title">快速导航</li>
+                <li>门票购买</li>
+                <li>线路选择</li>
+                <li>旅游特价</li>
+                <li>租车服务</li>
+                <li>旅游问答</li>
+                <li>订火车票</li>
+                <li>订购机票</li>
+                <li>旅游保险</li>
+                <li>旅游资讯</li>
+                <li>APP下载</li>
+            </ul>
+            <div class="QR_code">
+                <p class="first_title" style="margin-bottom: 13px;">手游新疆App</p>
+                <img src="../../img/public-end-ewm-1.jpg" alt="">
+                <p class="QR_code_content">下载有惊喜哦</p>
+            </div>
+            <div class="QR_code">
+                <p class="first_title" style="margin-bottom: 13px;">手游新疆公众号</p>
+                <img src="../../img/public-end-ewm-2.jpg" alt="">
+                <p class="QR_code_content">快来关注我吧</p>
+            </div>
+
+        </div>
+        <div class="link">
+            <p>集团网站:<span>手游新疆资讯网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span><span>手游新疆XX网</span>
+            </p>
+            <p>友情链接:<span>百度网旅游</span>
+                <span>途牛网旅游</span>
+                <span>人民网旅游</span>
+                <span>奇艺旅游</span>
+            </p>
+        </div>
+        <div class="website">
+            <div class="love">
+                <p>新疆的旅游路上,我们一直都在</p>
+                <p><img src="../../img/public-end_icon-1.png" alt=""><img src="../../img/public-end_icon-2.png"
+                        alt=""><img src="../../img/public-end_icon-3.png" alt=""></p>
+            </div>
+            <div class="Development">
+                <p><img src="../../img/public-bot-logo.png" alt=""></p>
+                <p><span>手游新疆</span><span>域名(www.shouyouxinjiang.com) 版权所有</span><span>新ICP备18001279号-1</span></p>
+                <p><span>新公安网安备 65230102652521</span><span>新网文[2018]10409-11号</span><span>增值电信业务经营许可证:新B2-20180050
+                    </span></p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            disableOnInteraction: false, //手动滑动之后不打断播放
+            delay: 2000
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+
+    })
+
+
+</script>
+
+</html>
