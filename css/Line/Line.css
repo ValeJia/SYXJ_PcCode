@@ -57,6 +57,21 @@
    -webkit-line-clamp: 2;
    overflow: hidden;
 }
+.zhezhao2 {
+    padding: 0 10px;
+    margin-left: 5px;
+    width: 341px;
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    bottom: 63px;
+    height: 41px;
+    background: rgb(0,0,0,0.4);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
 .content_list_periphery_list figure img,.content_list_periphery_Customized_list figure img{
     width: 270px;
     height: 180px;

@@ -326,6 +326,65 @@
 
 </html>
 <script>
+        (function () {
+
+url = "http://www.shouyouxinjiang.com/frontshow/productlist/productList";
+// url = "http://192.168.90.170:8082/frontshow/productlist/productList";
+$.ajaxSettings.async = false;
+$("#cat").val("d0e580652fb044ffa77d1ee8f5b094cc")
+$("#nowPage").val(1)
+$("#sortType").val("score")
+$("#sortBy").val("1")
+$.ajax({
+    type: 'get',//类型
+    url: url,//地址
+    dataType: 'json',
+    // xhrFields: {
+    //     withCredentials: true
+    // },
+    // crossDomain: true,
+    async: false,
+    data: {
+        "cat": "d0e580652fb044ffa77d1ee8f5b094cc",
+        "pageShow": "10"
+        // ranNum: Math.random()
+    },
+    //请求成功
+    success: function (data) {
+        console.log(data)
+        totalPage = data.wm.totalPage;
+        var Scenic_List = data.wm.productList;
+        var Scenic_List = data.wm.productList;
+        var listStr='';
+        var Scenic_hot = data.hotProduct
+        console.log(Scenic_List)
+        for (var i = 0; i < Scenic_List.length; i++) {
+            listStr += ` <figure>
+                <img src="http://www.shouyouxinjiang.com/ueditor/getFileByFileKey/`+ Scenic_List[i].pic + `" alt=""  onerror="javascript:this.src='../../img/nopic.gif'">
+                <figcaption>
+                    <p class="Scenic_price">
+                        <font>¥<em>`+Scenic_List[i].price+`</em><span style="color: #666;">起</span></font> <span class="rob">已抢<font>`+Scenic_List[i].sales+`</font>张</span>
+                    </p>
+                </figcaption>
+                <div class="zhezhao">`+Scenic_List[i].productName+` </div>
+            </figure> `;
+            $(".content_list_periphery_list").html(listStr)
+        }
+        var pages = 1;
+        var listStrs = '';
+        for (let x = 0; x < totalPage; x++) {
+            listStrs += `
+                        <li><a href="javascript:void(0)">`+ (pages++) + `</a></li>
+        `;
+        }
+        $(".LEFT_page").after(listStrs);
+        $(".fenye>font").html(totalPage)
+    }
+})
+})()
+
+
+
 
     var mySwiper = new Swiper('.swiper-container', {
         // direction: 'vertical', // 垂直切换选项
